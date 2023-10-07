@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Tesla</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #sec1{
+        height: 100vh;
+        width: 100%;
+        padding: 1px;
+        background-image: url(./images/Homepage-Model-3-Desktop-LHD.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    #navbar1_sec1{
+        height: 60px;
+        width: 100%;
+        /* border: 1px solid red; */
+        position: fixed;
+    }
+    #nav1_sec1_logo1{
+        height: 20px;
+        width: 150px;
+        /* border: 1px solid; */
+        margin-left: 50px;
+        margin-top: 20px;
+        display: inline-block;
+        vertical-align: top;
+        background-image: url(https://png.monster/wp-content/uploads/2021/03/Tesla_Inc.-Wordmark-Black-Logo.wine-6bbe293a.png);
+        background-position: center;
+        background-size: cover;
+        cursor: pointer;
+        /* position: fixed; */
+    }
+    .nav1_ul1_sec1{
+        /* border: 1px solid; */
+        width: max-content;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 150px;
+        margin-top: 20px;
+        /* position: fixed; */
+    }
+    #sec1_list1{
+        list-style: none;
+        display: inline-block;
+        color: black;
+        margin-left: 30px;
+        cursor: pointer;
+        /* border: 1px solid yellow; */
+        transition-property: all;
+        transition-duration: 0.3s;
+        transition-timing-function: linear;
+        position: relative;
+    }
+    #sec1_list1:hover{
+        background-color: rgba(128, 128, 128, 0.267);
+    }
+    #modelS_category{
+        height: 20px;
+        width: 55px;
+        background-color: white;
+        border: 1px solid;
+        margin-left: 20px;
+        position: absolute;
+        visibility: hidden;
+        transition-property: all;
+        transition-duration: 0.1s;
+        transition-timing-function: linear;
+    }
+    #sec1_list1:hover #modelS_category{
+        visibility: visible;
+    }
+    #modelS_category_w1{
+        color: black;
+        font-size: small;
+        text-align: center;
+        margin-top: 2px;
+    }
+    #model3_category{
+        height: 20px;
+        width: 55px;
+        background-color: white;
+        border: 1px solid;
+        margin-left: 20px;
+        position: absolute;
+        visibility: hidden;
+        transition-property: all;
+        transition-duration: 0.1s;
+        transition-timing-function: linear;
+    }
+    #sec1_list1:hover #model3_category{
+        visibility: visible;
+    }
+    #model3_category_w1{
+        color: black;
+        font-size: small;
+        text-align: center;
+        margin-top: 2px;
+    }
+    #modelx_category{
+        height: 20px;
+        width: 55px;
+        background-color: white;
+        border: 1px solid;
+        margin-left: 20px;
+        position: absolute;
+        visibility: hidden;
+        transition-property: all;
+        transition-duration: 0.1s;
+        transition-timing-function: linear;
+    }
+    #sec1_list1:hover #modelx_category{
+        visibility: visible;
+    }
+    #modelx_category_w1{
+        color: black;
+        font-size: small;
+        text-align: center;
+        margin-top: 2px;
+    }
+    #modely_category{
+        height: 20px;
+        width: 55px;
+        background-color: white;
+        border: 1px solid;
+        margin-left: 20px;
+        position: absolute;
+        visibility: hidden;
+        transition-property: all;
+        transition-duration: 0.1s;
+        transition-timing-function: linear;
+    }
+    #sec1_list1:hover #modely_category{
+        visibility: visible;
+    }
+    #modely_category_w1{
+        color: black;
+        font-size: small;
+        text-align: center;
+        margin-top: 2px;
+    }
+    #SolarRoof_category{
+        height: 20px;
+        width: 68px;
+        background-color: white;
+        border: 1px solid;
+        margin-left: 20px;
+        position: absolute;
+        visibility: hidden;
+        transition-property: all;
+        transition-duration: 0.1s;
+        transition-timing-function: linear;
+    }
+    #sec1_list1:hover #SolarRoof_category{
+        visibility: visible;
+    }
+    #SolarRoof_category_w1{
+        color: black;
+        font-size: small;
+        text-align: center;
+        margin-top: 2px;
+    }
+    #SolarPanels_category{
+        height: 20px;
+        width: 80px;
+        background-color: white;
+        border: 1px solid;
+        margin-left: 20px;
+        position: absolute;
+        visibility: hidden;
+        transition-property: all;
+        transition-duration: 0.1s;
+        transition-timing-function: linear;
+    }
+    #sec1_list1:hover #SolarPanels_category{
+        visibility: visible;
+    }
+    #SolarPanels_category_w1{
+        color: black;
+        font-size: small;
+        text-align: center;
+        margin-top: 2px;
+    }
+    #Shop_category{
+        height: 20px;
+        width: 45px;
+        background-color: white;
+        border: 1px solid;
+        margin-left: 20px;
+        position: absolute;
+        visibility: hidden;
+        transition-property: all;
+        transition-duration: 0.1s;
+        transition-timing-function: linear;
+    }
+    #sec1_list2:hover #Shop_category{
+        visibility: visible;
+    }
+    #Shop_category_w1{
+        color: black;
+        font-size: small;
+        text-align: center;
+        margin-top: 2px;
+    }
+    #Account_category{
+        height: 20px;
+        width: 55px;
+        background-color: white;
+        border: 1px solid;
+        margin-left: 20px;
+        position: absolute;
+        visibility: hidden;
+        transition-property: all;
+        transition-duration: 0.1s;
+        transition-timing-function: linear;
+    }
+    #sec1_list2:hover #Account_category{
+        visibility: visible;
+    }
+    #Account_category_w1{
+        color: black;
+        font-size: small;
+        text-align: center;
+        margin-top: 2px;
+    }
+    #Menu_category{
+        height: 20px;
+        width: 45px;
+        background-color: white;
+        border: 1px solid;
+        margin-left: 20px;
+        position: absolute;
+        visibility: hidden;
+        transition-property: all;
+        transition-duration: 0.1s;
+        transition-timing-function: linear;
+    }
+    #sec1_list2:hover #Menu_category{
+        visibility: visible;
+    }
+    #Menu_category_w1{
+        color: black;
+        font-size: small;
+        text-align: center;
+        margin-top: 2px;
+    }
+    .nav1_ul2_sec1{
+        /* border: 1px solid; */
+        width: max-content;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 130px;
+        margin-top: 20px;
+        /* position: fixed; */
+    }
+    #sec1_list2{
+        list-style: none;
+        display: inline-block;
+        color: black;
+        margin-left: 30px;
+        cursor: pointer;
+        /* border: 1px solid yellow; */
+        transition-property: all;
+        transition-duration: 0.3s;
+        transition-timing-function: linear;
+    }
+    #sec1_list2:hover{
+        background-color: rgba(128, 128, 128, 0.267);
+    }
+    #main_witing1_box1{
+        height: 100px;
+        width: 400px;
+        margin-top: 100px;
+        margin-left: 450px;
+        /* border: 1px solid; */
+        /* left: 450PX;
+        top: 80px; */
+        /* position: fixed; */
+    }
+    #main_heading1_sec1{
+        color: rgb(23,26,32);
+        text-align: center;
+        font-size: 40px;
+        font-weight: 100;
+        /* cursor: pointer; */
+    }
+    #main_para1_sec1{
+        color: rgb(35,38,43);
+        text-align: center;
+        font-size: x-large;
+        margin-top: 5px;
+        /* cursor: pointer; */
+    }
+    #mainbtn_box1{
+        height: 70px;
+        width: 550px;
+        /* border: 1px solid; */
+        left: 400px;
+        top: 500px;
+        position: fixed;
+    }
+    #main_btn1_sec1{
+        height: 48px;
+        width: 250px;
+        border: transparent;
+        background-color: rgb(58,61,66);
+        font-size: large;
+        color: white;
+        border-radius: 5px;
+        display: inline-block;
+        vertical-align: top;
+        cursor: pointer;
+        position: relative;
+    }
+    #btn1_category{
+        height: 20px;
+        width: 85px;
+        background-color: white;
+        border: 1px solid black;
+        margin-left: 80px;
+        margin-top: 15px;
+        /* position: absolute; */
+        visibility: hidden;
+        position: absolute;
+        transition-property: all;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-in;
+    }
+    #main_btn1_sec1:hover #btn1_category{
+        visibility: visible;
+    }
+    #btn1_category_w1{
+        color: black;
+        font-size: small;
+        text-align: center;
+        margin-top: 2px;
+    }
+    #main_btn2_sec1{
+        height: 48px;
+        width: 250px;
+        border: transparent;
+        background-color: rgb(232,232,232);
+        font-size: large;
+        color: rgb(94,97,100);
+        border-radius: 5px;
+        display: inline-block;
+        vertical-align: top;
+        cursor: pointer;
+        margin-left: 40px;
+        /* position: fixed; */
+    }
+    #btn2_category{
+        height: 20px;
+        width: 85px;
+        background-color: white;
+        border: 1px solid;
+        margin-left: 90px;
+        margin-top: 10px;
+        position: absolute;
+        visibility: hidden;
+        transition-property: all;
+        transition-duration: 0.2s;
+        transition-timing-function: linear;
+    }
+    #main_btn2_sec1:hover #btn2_category{
+        visibility: visible;
+    }
+    #btn2_category_w1{
+        color: black;
+        font-size: small;
+        text-align: center;
+        margin-top: 2px;
+    }
+    #main_dancing_arrow_box1{
+        height: 50px;
+        width: 50px;
+        /* border: 1px solid; */
+        margin: auto;
+        margin-top: 380px;
+        animation-name: dancingarwo;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    @keyframes dancingarwo{
+        0%{
+            margin-top: 380px;
+        }
+        25%{
+            margin-top: 390px;
+        }
+        50%{
+            margin-top: 380px;
+        }
+        75%{
+            margin-top: 385px;
+        }
+        100%{
+            margin-top: 380px;
+        }
+    }
+    .down1{
+        font-size: 30px;
+        color: rgb(57,60,65);
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+
+
+
+
+
+
+    #sec2{
+        height: 100vh;
+        width: 100%;
+        background-image: url(./images/Homepage-Model-Y-Global-Desktop.jpg);
+        background-position: center;
+        background-size: cover;
+        padding: 1px;
+    }
+    #main_witing1_box2{
+        height: 85px;
+        width: 300px;
+        margin-top: 100px;
+        margin-left: 530px;
+        /* border-bottom: 1px solid; */
+        /* left: 450PX;
+        top: 80px; */
+        /* position: fixed; */
+    }
+    #main_witing1_box2:hover{
+        border-bottom: 2px solid;
+    }
+    #main_heading1_sec2{
+        color: rgb(23,26,32);
+        text-align: center;
+        font-size: 40px;
+        font-weight: 100;
+        /* cursor: pointer; */
+    }
+    #main_para1_sec2{
+        color: rgb(35,38,43);
+        text-align: center;
+        font-size: x-large;
+        margin-top: 5px;
+        /* cursor: pointer; */
+    }
+
+
+
+
+
+
+    #sec3{
+        height: 100vh;
+        width: 100%;
+        background-image: url(./images/Homepage-Model-S-Desktop-LHD.jpg);
+        background-position: center;
+        background-size: cover;
+        padding: 1px;
+    }
+    #main_witing1_box3{
+        height: 85px;
+        width: 300px;
+        margin-top: 100px;
+        margin-left: 530px;
+        border-bottom: 1px solid;
+        /* left: 450PX;
+        top: 80px; */
+        /* position: fixed; */
+    }
+    #main_witing1_box3:hover{
+        border-bottom: 2px solid;
+    }
+    #main_heading1_sec3{
+        color: rgb(23,26,32);
+        text-align: center;
+        font-size: 40px;
+        font-weight: 100;
+        cursor: pointer;
+    }
+    #main_para1_sec3{
+        color: rgb(35,38,43);
+        text-align: center;
+        font-size: medium;
+        margin-top: 5px;
+        /* cursor: pointer; */
+    }
+
+
+
+
+    #sec4{
+        height: 100vh;
+        width: 100%;
+        background-image: url(./images/Homepage-Model-X-Desktop-LHD.jpg);
+        background-position: center;
+        background-size: cover;
+        padding: 1px;
+    }
+    #main_witing1_box4{
+        height: 85px;
+        width: 300px;
+        margin-top: 100px;
+        margin-left: 530px;
+        border-bottom: 1px solid;
+        /* left: 450PX;
+        top: 80px; */
+        /* position: fixed; */
+    }
+    #main_witing1_box4:hover{
+        border-bottom: 2px solid;
+    }
+    #main_heading1_sec4{
+        color: rgb(23,26,32);
+        text-align: center;
+        font-size: 40px;
+        font-weight: 100;
+        cursor: pointer;
+    }
+    #main_para1_sec4{
+        color: rgb(35,38,43);
+        text-align: center;
+        font-size: medium;
+        margin-top: 5px;
+        /* cursor: pointer; */
+    }
+    #sec5{
+        height: 100vh;
+        width: 100%;
+        background-image: url(./images/_25-HP-SolarPanels-D.jpg);
+        background-position: center;
+        background-size: cover;
+        padding: 1px;
+    }
+    #main_witing1_box5{
+        height: 85px;
+        width: 300px;
+        margin-top: 100px;
+        margin-left: 530px;
+        border-bottom: 1px solid;
+        /* left: 450PX;
+        top: 80px; */
+        /* position: fixed; */
+    }
+    #main_witing1_box5:hover{
+        border-bottom: 2px solid;
+    }
+    #main_heading1_sec5{
+        color: rgb(23,26,32);
+        text-align: center;
+        font-size: 40px;
+        font-weight: 100;
+        cursor: pointer;
+    }
+    #main_para1_sec5{
+        color: rgb(35,38,43);
+        text-align: center;
+        font-size: medium;
+        margin-top: 5px;
+        /* cursor: pointer; */
+    }
+    #sec6{
+        height: 100vh;
+        width: 100%;
+        background-image: url(./images/Homepage-SolarRoof-Desktop-Global.jpg);
+        background-position: center;
+        background-size: cover;
+        padding: 1px;
+    }
+    #main_witing1_box6{
+        height: 85px;
+        width: 300px;
+        margin-top: 100px;
+        margin-left: 530px;
+        border-bottom: 1px solid;
+        /* left: 450PX;
+        top: 80px; */
+        /* position: fixed; */
+    }
+    #main_witing1_box6:hover{
+        border-bottom: 2px solid;
+    }
+    #main_heading1_sec6{
+        color: rgb(23,26,32);
+        text-align: center;
+        font-size: 40px;
+        font-weight: 100;
+        cursor: pointer;
+    }
+    #main_para1_sec6{
+        color: rgb(35,38,43);
+        text-align: center;
+        font-size: medium;
+        margin-top: 5px;
+        /* cursor: pointer; */
+    }
+    #sec7{
+        height: 100vh;
+        width: 100%;
+        background-image: url(./images/dd739764-bcaa-4263-9488-8c73bc9fb046.jpg);
+        background-position: center;
+        background-size: cover;
+        padding: 1px;
+    }
+    #main_witing1_box7{
+        height: 85px;
+        width: 300px;
+        margin-top: 100px;
+        margin-left: 530px;
+        /* border-bottom: 1px solid; */
+        /* left: 450PX;
+        top: 80px; */
+        /* position: fixed; */
+    }
+    /* #main_witing1_box7:hover{
+        border-bottom: 2px solid;
+    } */
+    #main_heading1_sec7{
+        color: rgb(23,26,32);
+        text-align: center;
+        font-size: 40px;
+        font-weight: 100;
+        cursor: pointer;
+    }
+    #main_para1_sec7{
+        color: rgb(35,38,43);
+        text-align: center;
+        font-size: medium;
+        margin-top: 5px;
+        /* cursor: pointer; */
+    }
+</style>
+<body>
+    <div id="sec1">
+        <nav id="navbar1_sec1">
+            <div id="nav1_sec1_logo1"></div>
+            <ul class="nav1_ul1_sec1">
+                <li id="sec1_list1">Model S
+                    <div id="modelS_category">
+                        <p id="modelS_category_w1">Model S</p>
+                    </div>
+                </li>
+                <li id="sec1_list1">Model 3
+                    <div id="model3_category">
+                        <p id="model3_category_w1">Model 3</p>
+                    </div>
+                </li>
+                <li id="sec1_list1">Model X
+                    <div id="modelx_category">
+                        <p id="modelx_category_w1">Model X</p>
+                    </div>
+                </li>
+                <li id="sec1_list1">Model Y
+                    <div id="modely_category">
+                        <p id="modely_category_w1">Model Y</p>
+                    </div>
+                </li>
+                <li id="sec1_list1">Solar Roof
+                    <div id="SolarRoof_category">
+                        <p id="SolarRoof_category_w1">Solar Roof</p>
+                    </div>
+                </li>
+                <li id="sec1_list1">Solar Panels
+                    <div id="SolarPanels_category">
+                        <p id="SolarPanels_category_w1">Solar Panels</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="nav1_ul2_sec1">
+                <li id="sec1_list2">Shop
+                    <div id="Shop_category">
+                        <p id="Shop_category_w1">Shop</p>
+                    </div>
+                </li>
+                <li id="sec1_list2">Account
+                    <div id="Account_category">
+                        <p id="Account_category_w1">Account</p>
+                    </div>
+                </li>
+                <li id="sec1_list2">Menu
+                    <div id="Menu_category">
+                        <p id="Menu_category_w1">Menu</p>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div id="main_witing1_box1">
+            <h1 id="main_heading1_sec1">Model 3</h1>
+            <p id="main_para1_sec1">Leasing starting at $349/mo</p>
+        </div>
+        <div id="mainbtn_box1">
+            <button id="main_btn1_sec1">Custom Order 
+                <div id="btn1_category">
+                    <p id="btn1_category_w1">Custom Order</p>
+                </div>
+            </button>
+            <button id="main_btn2_sec1">Demo Drive
+                <div id="btn2_category">
+                    <p id="btn2_category_w1">Demo Drive</p>
+                </div>
+            </button>
+        </div>
+            <div id="main_dancing_arrow_box1"><i class="fa-solid fa-angle-down down1"></i></div>
+    </div>
+    <div id="sec2">
+        <div id="main_witing1_box2">
+            <h1 id="main_heading1_sec2">Model Y</h1>
+            <!-- <p id="main_para1_sec2">Leasing starting at $349/mo</p> -->
+        </div>
+    </div>
+    <div id="sec3">
+        <div id="main_witing1_box3">
+            <h1 id="main_heading1_sec3">Model S</h1>
+            <p id="main_para1_sec3">Schedule a Demo Drive</p>
+        </div>
+    </div>
+    <div id="sec4">
+        <div id="main_witing1_box4">
+            <h1 id="main_heading1_sec4">Model X</h1>
+            <p id="main_para1_sec4">Schedule a Demo Drive</p>
+        </div>
+    </div>
+    <div id="sec5">
+        <div id="main_witing1_box5">
+            <h1 id="main_heading1_sec5">Solar Panels</h1>
+            <p id="main_para1_sec5">Lowest Cost Solar Panels in America</p>
+        </div>
+    </div>
+    <div id="sec6">
+        <div id="main_witing1_box6">
+            <h1 id="main_heading1_sec6">Solar Roof</h1>
+            <p id="main_para1_sec6">Produce Clean Energy From Your Roof</p>
+        </div>
+    </div>
+    <div id="sec7">
+        <div id="main_witing1_box7">
+            <h1 id="main_heading1_sec7">Accessories</h1>
+            <!-- <p id="main_para1_sec7">Produce Clean Energy From Your Roof</p> -->
+        </div>
+    </div>
+</body>
+</html>

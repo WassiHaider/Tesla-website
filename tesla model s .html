@@ -1,0 +1,4338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Model S</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #sec1 {
+            height: 100vh;
+            width: 100%;
+            background-image: url(./images/WhatsApp\ Image\ 2023-02-20\ at\ 9.27.39\ PM.jpeg);
+            background-position: center;
+            background-size: cover;
+            padding: 1px;
+            overflow: hidden;
+        }
+
+        #navbar1_sec1 {
+            height: 60px;
+            width: 100%;
+            /* border: 1px solid red; */
+            /* position: fixed; */
+        }
+
+        #nav1_sec1_logo1 {
+            height: 20px;
+            width: 150px;
+            /* border: 1px solid; */
+            margin-left: 50px;
+            margin-top: 20px;
+            display: inline-block;
+            vertical-align: top;
+            background-image: url(https://png.monster/wp-content/uploads/2021/03/Tesla_Inc.-Wordmark-Black-Logo.wine-6bbe293a.png);
+            background-position: center;
+            background-size: cover;
+            cursor: pointer;
+            /* position: fixed; */
+        }
+
+        .nav1_ul1_sec1 {
+            /* border: 1px solid; */
+            width: max-content;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 150px;
+            margin-top: 20px;
+            /* position: fixed; */
+        }
+
+        #sec1_list1 {
+            list-style: none;
+            display: inline-block;
+            color: black;
+            margin-left: 30px;
+            cursor: pointer;
+            /* border: 1px solid yellow; */
+            transition-property: all;
+            transition-duration: 0.3s;
+            transition-timing-function: linear;
+            position: relative;
+        }
+
+        #sec1_list1:hover {
+            background-color: rgba(128, 128, 128, 0.267);
+        }
+
+        #modelS_category {
+            height: 20px;
+            width: 55px;
+            background-color: white;
+            border: 1px solid;
+            margin-left: 20px;
+            position: absolute;
+            visibility: hidden;
+            transition-property: all;
+            transition-duration: 0.1s;
+            transition-timing-function: linear;
+        }
+
+        #sec1_list1:hover #modelS_category {
+            visibility: visible;
+        }
+
+        #modelS_category_w1 {
+            color: black;
+            font-size: small;
+            text-align: center;
+            margin-top: 2px;
+        }
+
+        #model3_category {
+            height: 20px;
+            width: 55px;
+            background-color: white;
+            border: 1px solid;
+            margin-left: 20px;
+            position: absolute;
+            visibility: hidden;
+            transition-property: all;
+            transition-duration: 0.1s;
+            transition-timing-function: linear;
+        }
+
+        #sec1_list1:hover #model3_category {
+            visibility: visible;
+        }
+
+        #model3_category_w1 {
+            color: black;
+            font-size: small;
+            text-align: center;
+            margin-top: 2px;
+        }
+
+        #modelx_category {
+            height: 20px;
+            width: 55px;
+            background-color: white;
+            border: 1px solid;
+            margin-left: 20px;
+            position: absolute;
+            visibility: hidden;
+            transition-property: all;
+            transition-duration: 0.1s;
+            transition-timing-function: linear;
+        }
+
+        #sec1_list1:hover #modelx_category {
+            visibility: visible;
+        }
+
+        #modelx_category_w1 {
+            color: black;
+            font-size: small;
+            text-align: center;
+            margin-top: 2px;
+        }
+
+        #modely_category {
+            height: 20px;
+            width: 55px;
+            background-color: white;
+            border: 1px solid;
+            margin-left: 20px;
+            position: absolute;
+            visibility: hidden;
+            transition-property: all;
+            transition-duration: 0.1s;
+            transition-timing-function: linear;
+        }
+
+        #sec1_list1:hover #modely_category {
+            visibility: visible;
+        }
+
+        #modely_category_w1 {
+            color: black;
+            font-size: small;
+            text-align: center;
+            margin-top: 2px;
+        }
+
+        #SolarRoof_category {
+            height: 20px;
+            width: 68px;
+            background-color: white;
+            border: 1px solid;
+            margin-left: 20px;
+            position: absolute;
+            visibility: hidden;
+            transition-property: all;
+            transition-duration: 0.1s;
+            transition-timing-function: linear;
+        }
+
+        #sec1_list1:hover #SolarRoof_category {
+            visibility: visible;
+        }
+
+        #SolarRoof_category_w1 {
+            color: black;
+            font-size: small;
+            text-align: center;
+            margin-top: 2px;
+        }
+
+        #SolarPanels_category {
+            height: 20px;
+            width: 80px;
+            background-color: white;
+            border: 1px solid;
+            margin-left: 20px;
+            position: absolute;
+            visibility: hidden;
+            transition-property: all;
+            transition-duration: 0.1s;
+            transition-timing-function: linear;
+        }
+
+        #sec1_list1:hover #SolarPanels_category {
+            visibility: visible;
+        }
+
+        #SolarPanels_category_w1 {
+            color: black;
+            font-size: small;
+            text-align: center;
+            margin-top: 2px;
+        }
+
+        #Shop_category {
+            height: 20px;
+            width: 45px;
+            background-color: white;
+            border: 1px solid;
+            margin-left: 20px;
+            position: absolute;
+            visibility: hidden;
+            transition-property: all;
+            transition-duration: 0.1s;
+            transition-timing-function: linear;
+        }
+
+        #sec1_list2:hover #Shop_category {
+            visibility: visible;
+        }
+
+        #Shop_category_w1 {
+            color: black;
+            font-size: small;
+            text-align: center;
+            margin-top: 2px;
+        }
+
+        #Account_category {
+            height: 20px;
+            width: 55px;
+            background-color: white;
+            border: 1px solid;
+            margin-left: 20px;
+            position: absolute;
+            visibility: hidden;
+            transition-property: all;
+            transition-duration: 0.1s;
+            transition-timing-function: linear;
+        }
+
+        #sec1_list2:hover #Account_category {
+            visibility: visible;
+        }
+
+        #Account_category_w1 {
+            color: black;
+            font-size: small;
+            text-align: center;
+            margin-top: 2px;
+        }
+
+        #Menu_category {
+            height: 20px;
+            width: 45px;
+            background-color: white;
+            border: 1px solid;
+            margin-left: 20px;
+            position: absolute;
+            visibility: hidden;
+            transition-property: all;
+            transition-duration: 0.1s;
+            transition-timing-function: linear;
+        }
+
+        #sec1_list2:hover #Menu_category {
+            visibility: visible;
+        }
+
+        #Menu_category_w1 {
+            color: black;
+            font-size: small;
+            text-align: center;
+            margin-top: 2px;
+        }
+
+        .nav1_ul2_sec1 {
+            /* border: 1px solid; */
+            width: max-content;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 130px;
+            margin-top: 20px;
+            /* position: fixed; */
+        }
+
+        #sec1_list2 {
+            list-style: none;
+            display: inline-block;
+            color: black;
+            margin-left: 30px;
+            cursor: pointer;
+            /* border: 1px solid yellow; */
+            transition-property: all;
+            transition-duration: 0.3s;
+            transition-timing-function: linear;
+        }
+
+        #sec1_list2:hover {
+            background-color: rgba(128, 128, 128, 0.267);
+        }
+
+        #main_witing1_box1 {
+            height: 100px;
+            width: 400px;
+            margin-top: 100px;
+            margin-left: 450px;
+            /* border: 1px solid; */
+            /* left: 450PX;
+        top: 80px; */
+            /* position: fixed; */
+        }
+
+        #main_heading1_sec1 {
+            color: rgb(23, 26, 32);
+            text-align: center;
+            font-size: 40px;
+            font-weight: 100;
+            /* cursor: pointer; */
+        }
+
+        #main_para1_sec1 {
+            color: rgb(35, 38, 43);
+            text-align: center;
+            font-size: x-large;
+            margin-top: 5px;
+            /* cursor: pointer; */
+        }
+
+        #main_witing_box1_sec1 {
+            height: 80px;
+            width: 200px;
+            /* border: 1px solid; */
+            margin: 30px auto;
+        }
+
+        #sec1_w1 {
+            text-align: center;
+            font-size: 45px;
+            font-weight: 100;
+        }
+
+        #sec1_w2 {
+            color: rgb(56, 61, 69);
+            text-align: center;
+        }
+
+        #long_div1_sec1 {
+            height: 80px;
+            width: 70%;
+            /* border: 1px solid red; */
+            /* margin: 330px auto; */
+            margin-left: 15%;
+            margin-top: 350px;
+            /* display: inline-block;
+        vertical-align: top; */
+        }
+
+        .internal_box_sec1 {
+            height: 100%;
+            width: 120px;
+            /* border: 1px solid green; */
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #in1_w1 {
+            color: white;
+            text-align: center;
+        }
+
+        #in1_w2 {
+            color: white;
+            text-align: center;
+            font-size: small;
+            margin-top: 10px;
+        }
+
+        .in2 {
+            margin-left: 40px;
+        }
+
+        #in2_w1 {
+            color: white;
+            text-align: center;
+        }
+
+        #in2_w2 {
+            color: white;
+            text-align: center;
+            font-size: small;
+            margin-top: 10px;
+        }
+
+        .in3 {
+            margin-left: 40px;
+        }
+
+        #in3_w1 {
+            color: white;
+            text-align: center;
+        }
+        #in3_w2 {
+            color: white;
+            text-align: center;
+            font-size: small;
+            margin-top: 10px;
+        }
+
+        .in4 {
+            margin-left: 40px;
+        }
+
+        #in4_w1 {
+            color: white;
+            text-align: center;
+        }
+
+        #in4_w2 {
+            color: white;
+            text-align: center;
+            font-size: small;
+            margin-top: 10px;
+        }
+
+        #btn1_sec1 {
+            height: 40px;
+            width: 200px;
+            color: white;
+            font-size: large;
+            background-color: transparent;
+            border: 2px solid white;
+            border-radius: 5px;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 50px;
+            margin-top: 20px;
+            cursor: pointer;
+            transition-property: all;
+            transition-duration: 0.3s;
+            transition-timing-function: linear;
+        }
+
+        #btn1_sec1:hover {
+            background-color: white;
+            color: black;
+        }
+
+        #circel1_sec1 {
+            height: 50px;
+            width: 50px;
+            /* background-color: white; */
+            border-radius: 50%;
+            top: 500px;
+            right: 50px;
+            padding: 1px;
+            position: fixed;
+            cursor: pointer;
+        }
+
+        #sub_c2_sec1 {
+            height: 40px;
+            width: 40px;
+            background-color: aqua;
+            /* border: 1px solid; */
+            border-radius: 50%;
+            left: 4px;
+            top: 4px;
+            position: absolute;
+            animation-name: sperading1;
+            animation-duration: 1s;
+            animation-delay: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes sperading1 {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            20% {
+                transform: scale(1.5);
+                opacity: 0.3;
+            }
+
+            30% {
+                opacity: 0;
+            }
+
+            100% {
+                /* transform: scale(1.5); */
+                opacity: 0;
+            }
+        }
+
+        #sub_c3_sec1 {
+            height: 40px;
+            width: 40px;
+            background-color: white;
+            /* border: 1px solid; */
+            border-radius: 50%;
+            left: 4px;
+            top: 4px;
+            position: absolute;
+        }
+
+        .c3 {
+            color: rgb(87, 87, 87);
+            font-size: 30px;
+            margin-left: 5px;
+            margin-top: 5px;
+        }
+
+        #sec2 {
+            height: 30vh;
+            width: 100%;
+            background-color: black;
+            box-shadow: 1px 1px 50px 30px black;
+            padding: 1px;
+            overflow: hidden;
+        }
+
+        #main_text1_sec2 {
+            height: 50px;
+            width: 400px;
+            /* border: 1px solid white; */
+            margin: 70px auto;
+            animation-name: textcoimingup;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+        }
+
+        /* @keyframes textcoimingup{
+        0%{
+            margin-top: 150px;
+        }
+        100%{
+            margin-top: 70px;
+        }
+    } */
+        #text1_sec2 {
+            color: white;
+            text-align: center;
+        }
+
+
+        #sec3 {
+            height: 100vh;
+            width: 100%;
+            background-image: url(./images/WhatsApp\ Image\ 2023-02-20\ at\ 9.27.39\ PM\ \(1\).jpeg);
+            background-position: center;
+            background-size: cover;
+        }
+
+
+
+
+
+
+        #sec4 {
+            height: 155vh;
+            width: 100%;
+            background-color: rgb(0, 0, 0);
+            padding: 1px;
+        }
+
+        .mainslider_sec4 {
+            height: 810px;
+            width: 90%;
+            /* border: 1px solid white; */
+            border-radius: 20px;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+
+        .slider_box_sec5 {
+            height: 100%;
+            width: 5975px;
+            /* border: 1px solid blue; */
+            border-radius: 20px;
+        }
+
+        .slide1_sec4 {
+            height: 100%;
+            width: 1195px;
+            /* border: 1px solid brown; */
+            display: inline-block;
+            vertical-align: top;
+            /* overflow: visible; */
+            border-radius: 20px;
+        }
+
+        #sl1_v1 {
+            height: 570px;
+            width: 100%;
+            /* border: 1px solid rebeccapurple; */
+        }
+
+
+
+        #vedio1_sec4{
+            position: absolute;
+            animation-name: vedio1;
+            animation-duration: 9s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes vedio1{
+            0%{
+                opacity: 1;
+            }
+            20%{
+                opacity: 1;
+            }
+            21%{
+                opacity: 0;
+            }
+            40%{
+                opacity: 0;
+            }
+            41%{
+                opacity: 0;
+            }
+            60%{
+                opacity: 0;
+            }
+            61%{
+                opacity: 0;
+            }
+            80%{
+                opacity: 0;
+            }
+            81%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+        #vedio2_sec4{
+            position: absolute;
+            animation-name: vedio2;
+            animation-duration: 9s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes vedio2{
+            0%{
+                opacity: 0;
+            }
+            20%{
+                opacity: 0;
+            }
+            21%{
+                opacity: 1;
+            }
+            40%{
+                opacity: 1;
+            }
+            41%{
+                opacity: 0;
+            }
+            60%{
+                opacity: 0;
+            }
+            61%{
+                opacity: 0;
+            }
+            80%{
+                opacity: 0;
+            }
+            81%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+        #vedio3_sec4{
+            position: absolute;
+            animation-name: vedio3;
+            animation-duration: 9s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes vedio3{
+            0%{
+                opacity: 0;
+            }
+            20%{
+                opacity: 0;
+            }
+            21%{
+                opacity: 0;
+            }
+            40%{
+                opacity: 0;
+            }
+            41%{
+                opacity: 1;
+            }
+            60%{
+                opacity: 1;
+            }
+            61%{
+                opacity: 0;
+            }
+            80%{
+                opacity: 0;
+            }
+            81%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+        #vedio4_sec4{
+            position: absolute;
+            animation-name: vedio4;
+            animation-duration: 9s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes vedio4{
+            0%{
+                opacity: 0;
+            }
+            20%{
+                opacity: 0;
+            }
+            21%{
+                opacity: 0;
+            }
+            40%{
+                opacity: 0;
+            }
+            41%{
+                opacity: 0;
+            }
+            60%{
+                opacity: 0;
+            }
+            61%{
+                opacity: 1;
+            }
+            80%{
+                opacity: 1;
+            }
+            81%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+        #vedio5_sec4{
+            position: absolute;
+            animation-name: vedio5;
+            animation-duration: 9s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes vedio5{
+            0%{
+                opacity: 0;
+            }
+            20%{
+                opacity: 0;
+            }
+            21%{
+                opacity: 0;
+            }
+            40%{
+                opacity: 0;
+            }
+            41%{
+                opacity: 0;
+            }
+            60%{
+                opacity: 0;
+            }
+            61%{
+                opacity: 0;
+            }
+            80%{
+                opacity: 0;
+            }
+            81%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+
+
+
+
+
+        #sl1_witing_box1 {
+            height: 150px;
+            width: 700px;
+            /* border: 1px solid blanchedalmond; */
+            margin-left: 300px;
+            margin-top: 70px;
+        }
+
+        #sl1_circel1 {
+            height: 15px;
+            width: 15px;
+            background-color: white;
+            /* border: 1px solid white; */
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #sl1_circel2 {
+            height: 15px;
+            width: 15px;
+            background-color: rgb(92, 94, 98);
+            /* border: 1px solid white; */
+            margin-left: 4px;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #sl1_circel3 {
+            height: 15px;
+            width: 15px;
+            background-color: rgb(92, 94, 98);
+            /* border: 1px solid white; */
+            margin-left: 4px;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #sl1_circel4 {
+            height: 15px;
+            width: 15px;
+            background-color: rgb(92, 94, 98);
+            /* border: 1px solid white; */
+            margin-left: 4px;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #sl1_circel5 {
+            height: 15px;
+            width: 15px;
+            background-color: rgb(92, 94, 98);
+            /* border: 1px solid white; */
+            margin-left: 4px;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #sl1_w1 {
+            color: white;
+            margin-top: 15px;
+        }
+
+        #sl1_para1 {
+            color: white;
+            text-align: justify;
+            line-height: 25px;
+            margin-top: 20px;
+        }
+
+        .sl2 {
+            /* margin-left: -10px; */
+        }
+
+        #sl2_v1 {
+            height: 570px;
+            width: 100%;
+            border: 1px solid rebeccapurple;
+        }
+
+        #sl2_witing_box1 {
+            height: 150px;
+            width: 700px;
+            border: 1px solid blanchedalmond;
+            margin-left: 300px;
+            margin-top: 70px;
+        }
+
+        #sl2_circel1 {
+            height: 15px;
+            width: 15px;
+            background-color: rgb(92, 94, 98);
+            /* border: 1px solid white; */
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #sl2_circel2 {
+            height: 15px;
+            width: 15px;
+            background-color: white;
+            /* border: 1px solid white; */
+            margin-left: 4px;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #sl2_circel3 {
+            height: 15px;
+            width: 15px;
+            background-color: rgb(92, 94, 98);
+            /* border: 1px solid white; */
+            margin-left: 4px;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #sl2_circel4 {
+            height: 15px;
+            width: 15px;
+            background-color: rgb(92, 94, 98);
+            /* border: 1px solid white; */
+            margin-left: 4px;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #sl2_circel5 {
+            height: 15px;
+            width: 15px;
+            background-color: rgb(92, 94, 98);
+            /* border: 1px solid white; */
+            margin-left: 4px;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #sl2_w1 {
+            color: white;
+            margin-top: 15px;
+        }
+
+        #sl2_para1 {
+            /* color: white; */
+            text-align: justify;
+            line-height: 25px;
+            margin-top: 20px;
+        }
+
+        .sl3 {
+            /* margin-left: -10px; */
+        }
+
+        #sl3_v1 {
+            height: 570px;
+            width: 100%;
+            border: 1px solid rebeccapurple;
+        }
+
+        #sl3_witing_box1 {
+            height: 150px;
+            width: 700px;
+            border: 1px solid blanchedalmond;
+            margin-left: 300px;
+            margin-top: 70px;
+        }
+
+        #sl3_circel1 {
+            height: 15px;
+            width: 15px;
+            background-color: rgb(92, 94, 98);
+            /* border: 1px solid white; */
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #sl3_circel2 {
+
+            height: 15px;
+            width: 15px;
+            background-color: rgb(92, 94, 98);
+            /* border: 1px solid white; */
+            margin-left: 4px;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #sl3_circel3 {
+            height: 15px;
+            width: 15px;
+            background-color: white;
+            /* border: 1px solid white; */
+            margin-left: 4px;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #sl3_circel4 {
+            height: 15px;
+            width: 15px;
+            background-color: rgb(92, 94, 98);
+            /* border: 1px solid white; */
+            margin-left: 4px;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #sl3_circel5 {
+            height: 15px;
+            width: 15px;
+            background-color: rgb(92, 94, 98);
+            /* border: 1px solid white; */
+            margin-left: 4px;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #sl3_w1 {
+            color: white;
+            margin-top: 15px;
+        }
+
+        #sl3_para1 {
+            /* color: white; */
+            text-align: justify;
+            line-height: 25px;
+            margin-top: 20px;
+        }
+
+        .sl4 {
+            /* margin-left: -10px; */
+        }
+
+        #sl4_v1 {
+            height: 570px;
+            width: 100%;
+            border: 1px solid rebeccapurple;
+        }
+
+        #sl4_witing_box1 {
+            height: 150px;
+            width: 700px;
+            border: 1px solid blanchedalmond;
+            margin-left: 300px;
+            margin-top: 70px;
+        }
+
+        #sl4_circel1 {
+            height: 15px;
+            width: 15px;
+            background-color: rgb(92, 94, 98);
+            /* border: 1px solid white; */
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #sl4_circel2 {
+
+            height: 15px;
+            width: 15px;
+            background-color: rgb(92, 94, 98);
+            /* border: 1px solid white; */
+            margin-left: 4px;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #sl4_circel3 {
+            height: 15px;
+            width: 15px;
+            background-color: rgb(92, 94, 98);
+            /* border: 1px solid white; */
+            margin-left: 4px;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #sl4_circel4 {
+            height: 15px;
+            width: 15px;
+            background-color: white;
+            /* border: 1px solid white; */
+            margin-left: 4px;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #sl4_circel5 {
+            height: 15px;
+            width: 15px;
+            background-color: rgb(92, 94, 98);
+            /* border: 1px solid white; */
+            margin-left: 4px;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #sl4_w1 {
+            color: white;
+            margin-top: 15px;
+        }
+
+        #sl4_para1 {
+            /* color: white; */
+            text-align: justify;
+            line-height: 25px;
+            margin-top: 20px;
+        }
+
+        .sl5 {
+            margin-left: -20px;
+        }
+
+        #sl5_v1 {
+            height: 570px;
+            width: 100%;
+            border: 1px solid rebeccapurple;
+        }
+
+        #sl5_witing_box1 {
+            height: 150px;
+            width: 700px;
+            border: 1px solid blanchedalmond;
+            margin-left: 300px;
+            margin-top: 70px;
+        }
+
+        #sl5_circel1 {
+            height: 15px;
+            width: 15px;
+            background-color: rgb(92, 94, 98);
+            /* border: 1px solid white; */
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #sl5_circel2 {
+
+            height: 15px;
+            width: 15px;
+            background-color: rgb(92, 94, 98);
+            /* border: 1px solid white; */
+            margin-left: 4px;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #sl5_circel3 {
+            height: 15px;
+            width: 15px;
+            background-color: rgb(92, 94, 98);
+            /* border: 1px solid white; */
+            margin-left: 4px;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #sl5_circel4 {
+            height: 15px;
+            width: 15px;
+            background-color: rgb(92, 94, 98);
+            /* border: 1px solid white; */
+            margin-left: 4px;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #sl5_circel5 {
+            height: 15px;
+            width: 15px;
+            background-color: white;
+            /* border: 1px solid white; */
+            margin-left: 4px;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #sl5_w1 {
+            color: white;
+            margin-top: 15px;
+        }
+
+        #sl5_para1 {
+            /* color: white; */
+            text-align: justify;
+            line-height: 25px;
+            margin-top: 20px;
+        }
+
+
+
+        #sec5 {
+            height: 140vh;
+            width: 100%;
+            background-color: rgb(0, 0, 0);
+            /* border: 1px solid white; */
+            padding: 1px;
+        }
+
+        #img1_sec5 {
+            height: 280px;
+            width: 500px;
+            /* border: 1px solid white; */
+            margin-left: 150px;
+            background-image: url(./images/WhatsApp\ Image\ 2023-02-20\ at\ 9.27.41\ PM\ \(1\).jpeg);
+            background-position: center;
+            background-size: cover;
+            display: inline-block;
+            vertical-align: top
+        }
+
+        #witingbox1_sec5 {
+            height: 280px;
+            width: 500px;
+            /* border: 1px solid white; */
+            display: inline-block;
+            margin-left: 100px;
+            vertical-align: top;
+        }
+
+        #w1_sec5 {
+            color: white;
+            text-align: justify;
+            line-height: 23px;
+            margin-top: 50px;
+        }
+
+        #img2_sec5 {
+            height: 280px;
+            width: 500px;
+            /* border: 1px solid white; */
+            margin-left: 100px;
+            background-image: url(./images/WhatsApp\ Image\ 2023-02-20\ at\ 9.27.43\ PM\ \(1\).jpeg);
+            background-position: center;
+            background-size: cover;
+            display: inline-block;
+            vertical-align: top
+        }
+
+        #witingbox2_sec5 {
+            height: 280px;
+            width: 500px;
+            /* border: 1px solid white; */
+            display: inline-block;
+            margin-left: 150px;
+            vertical-align: top;
+        }
+
+        #w2_sec5 {
+            color: white;
+            text-align: justify;
+            line-height: 23px;
+            margin-top: 50px;
+        }
+
+        #img3_sec5 {
+            height: 280px;
+            width: 500px;
+            /* border: 1px solid white; */
+            margin-left: 150px;
+            background-image: url(./images/WhatsApp\ Image\ 2023-02-20\ at\ 9.27.41\ PM\ \(1\).jpeg);
+            background-position: center;
+            background-size: cover;
+            display: inline-block;
+            vertical-align: top
+        }
+
+        #witingbox3_sec5 {
+            height: 280px;
+            width: 500px;
+            /* border: 1px solid white; */
+            display: inline-block;
+            margin-left: 100px;
+            vertical-align: top;
+        }
+
+        #w3_sec5 {
+            color: white;
+            text-align: justify;
+            line-height: 23px;
+            margin-top: 50px;
+        }
+
+
+        #sec6 {
+            height: 50vh;
+            width: 100%;
+            background-image: url(./images/Model-S-Performance-Hero-Desktop-LHD.jpg);
+            background-position: center;
+            background-size: cover;
+            padding: 1px;
+        }
+
+        #witing_box1_sec6 {
+            height: 90px;
+            width: 760px;
+            /* border: 1px solid red; */
+            margin: auto;
+            margin-top: 200px;
+        }
+
+        .wbox_sec6 {
+            height: 100%;
+            width: 100px;
+            /* border: 1px solid green; */
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .wbox1 {
+            animation-name: wbox1;
+            animation-duration: .3s;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+            /* animation-delay: 1s; */
+        }
+
+        @keyframes wbox1 {
+            0% {
+                margin-top: 30px;
+                opacity: 0;
+            }
+
+            100% {
+                margin-top: 0px;
+                opacity: 1;
+            }
+        }
+
+        #wbox1_w1 {
+            color: white;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        #wbox1_para1 {
+            color: white;
+            text-align: center;
+            font-size: small;
+            margin-top: 10px;
+        }
+
+        .wbox2 {
+            margin-left: 220px;
+            animation-name: wbox2;
+            animation-duration: .3s;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+            animation-delay: 1s;
+        }
+
+        @keyframes wbox2 {
+            0% {
+                margin-top: 30px;
+                opacity: 0;
+            }
+
+            100% {
+                margin-top: 0px;
+                opacity: 1;
+            }
+        }
+
+        #wbox2_w1 {
+            color: white;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        #wbox2_para1 {
+            color: white;
+            text-align: center;
+            font-size: small;
+            margin-top: 10px;
+        }
+
+        .wbox3 {
+            margin-left: 220px;
+            animation-name: wbox3;
+            animation-duration: .3s;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+            animation-delay: 2s;
+        }
+
+        @keyframes wbox3 {
+            0% {
+                margin-top: 30px;
+                opacity: 0;
+            }
+
+            100% {
+                margin-top: 0px;
+                opacity: 1;
+            }
+        }
+
+        #wbox3_w1 {
+            color: white;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        #wbox3_para1 {
+            color: white;
+            text-align: center;
+            font-size: small;
+            margin-top: 10px;
+        }
+
+
+
+        #sec7{
+            height: 40vh;
+            width: 100%;
+            padding: 1px;
+        }
+        #btnbox1{
+            height: 200px;
+            width: 300px;
+            /* border: 1px solid; */
+            margin-left: 150px;
+            margin-top: 50px;
+            display: inline-block;
+            vertical-align: top ;
+        }
+        #btnw1{
+            color: rgb(117,118,122);
+            font-size: large;
+        }
+        #btnpara1{
+            color: rgb(23,26,32);
+            margin-top: 5px;
+        }
+        #btn1{
+            height: 40px;
+            width: 170px;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: white;
+            color: rgb(88,90,94);
+            font-size: large;
+            margin-top: 20px;
+            cursor: pointer;
+            transition-property: all;
+            transition-duration: 0.4s;
+            transition-timing-function: linear;
+        }
+        #btn1:hover{
+            background-color: black;
+            color: white;
+        }
+        #btn2{
+            height: 40px;
+            width: 170px;
+            border: transparent;
+            border-radius: 5px;
+            background-color: rgb(244,244,244);
+            color: rgb(88,90,94);
+            font-size: large;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        #parabox_sec7{
+            height: 200px;
+            width: 600px;
+            /* border: 1px solid; */
+            margin-left: 150px;
+            margin-top: 30px;
+            display: inline-block;
+            vertical-align: top ;
+        }
+        #para1_sec7{
+            color: rgb(89,91,96);
+            text-align: justify;
+            line-height: 25px;
+        }
+        #underline1{
+            text-decoration: underline;
+        }
+        #underline1:hover{
+            text-decoration: 2px underline;
+        }
+        #underline2{
+            text-decoration: underline;
+        }
+        #underline2:hover{
+            text-decoration: 2px underline;
+        }
+
+
+
+
+
+        #sec8{
+            height: 210vh;
+            width: 100%;
+            background-color: rgb(244,244,244);
+            padding: 1px;
+        }
+        #para_box1_sec8{
+            height: 130px;
+            width: 800px;
+            /* border: 1px solid; */
+            margin-left: 150px;
+            margin-top: 120px;
+        }
+        #heading1_sec8{
+            color: black;
+            font-weight: 100;
+        }
+        #para1_sec8{
+            color: rgb(158,160,162);
+            text-align: justify;
+            line-height: 25px;
+            margin-top: 20px;
+        }
+        #white_box1_sec8{
+            height: 600px;
+            width: 1200px;
+            background-color: white;
+            border-radius: 10px;
+            margin: 80px auto;
+            animation-name: imgchange;
+            animation-duration: 8s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes imgchange{
+            0%{
+                background-image: url(./images/img1.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+            50%{
+                background-image: url(./images/img1.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+            51%{
+                background-image: url(./images/img2.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+            100%{
+                background-image: url(./images/img2.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+        }
+        #animated_box_sec8{
+            height: 250px;
+            width: 1000px;
+            /* border: 1px solid; */
+            margin: auto;
+        }
+        .anibox{
+            height: 100%;
+            width: 480px;
+            border-top: 2px solid;
+            display: inline-block;
+            vertical-align: top;
+            cursor: pointer;
+            animation-name: fading1;
+            animation-duration: 8s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes fading1{
+            0%{
+                opacity: 1;
+            }
+            50%{
+                opacity: 1;
+            }
+            51%{
+                opacity: 0.4;
+            }
+            100%{
+                opacity: 0.4;
+            }
+        }
+        #ani1_h1{
+            color: #000;
+            font-weight: 100;
+            margin-top: 15px;
+        }
+        #ani1_p1{
+            text-align: justify;
+            color: rgb(23, 26, 32);
+            line-height: 20px;
+            margin-top: 20px;
+        }
+        .ani1_boxes{
+            height: 60px;
+            width: 100px;
+            /* border: 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 30px;
+        }
+        #a1_h1{
+            color: #000;
+            text-align: center;
+            /* font-weight: 100; */
+        }
+        #a1_p1{
+            color: rgb(94,96,100);
+            text-align: center;
+            font-size: small;
+            margin-top: 5px;
+        }
+        .a2{
+            margin-left: 40px;
+        }
+        #a2_h1{
+            color: #000;
+            text-align: center;
+            /* font-weight: 100; */
+        }
+        #a2_p1{
+            color: rgb(94,96,100);
+            text-align: center;
+            font-size: small;
+            margin-top: 5px;
+        }
+        .a3{
+            margin-left: 40px;
+        }
+        #a3_h1{
+            color: #000;
+            text-align: center;
+            /* font-weight: 100; */
+        }
+        #a3_p1{
+            color: rgb(94,96,100);
+            text-align: center;
+            font-size: small;
+            margin-top: 5px;
+        }
+        .boxani2{
+            margin-left: 30px;
+            animation-name: fading2;
+            animation-duration: 8s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes fading2{
+            0%{
+                opacity: 0.4;
+            }
+            50%{
+                opacity: 0.4;
+            }
+            51%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        #ani2_h1{
+            color: #000;
+            font-weight: 100;
+            margin-top: 15px;
+        }
+        #ani2_p1{
+            text-align: justify;
+            color: rgb(23, 26, 32);
+            line-height: 20px;
+            margin-top: 20px;
+        }
+        .ani2_boxes{
+            height: 60px;
+            width: 100px;
+            /* border: 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 30px;
+        }
+        #a4_h1{
+            color: #000;
+            text-align: center;
+            border: transparent;
+            /* font-weight: 100; */
+        }
+        #a4_p1{
+            color: rgb(94,96,100);
+            text-align: center;
+            font-size: small;
+            margin-top: 5px;
+        }
+        .a5{
+            margin-left: 40px;
+        }
+        #a5_h1{
+            color: #000;
+            text-align: center;
+            /* font-weight: 100; */
+        }
+        #a5_p1{
+            color: rgb(94,96,100);
+            text-align: center;
+            font-size: small;
+            margin-top: 5px;
+        }
+        .a6{
+            margin-left: 40px;
+        }
+        #a6_h1{
+            color: #000;
+            text-align: center;
+            /* font-weight: 100; */
+        }
+        #a6_p1{
+            color: rgb(94,96,100);
+            text-align: center;
+            font-size: small;
+            margin-top: 5px;
+        }
+        #last_w1_sec8{
+            text-align: center;
+            color: rgb(113,115,118);
+            margin-top: 40px;
+        }
+        #sec9{
+            height: 50vh;
+            width: 100%;
+            background-image: url(./images/Model-S-Exterior-Hero-Mobile-Global.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+
+
+
+        #sec10{
+            height: 40vh;
+            width: 100%;
+            background-color: black;
+            padding: 1px;
+        }
+        #btnbox1_sec10{
+            height: 200px;
+            width: 300px;
+            /* border: 1px solid; */
+            margin-left: 150px;
+            margin-top: 50px;
+            display: inline-block;
+            vertical-align: top ;
+        }
+        #btnw1_sec10{
+            color: white;
+            font-size: large;
+        }
+        #btnpara1_sec10{
+            color: white;
+            margin-top: 5px;
+        }
+        #btn1_sec10{
+            height: 40px;
+            width: 170px;
+            border: 2px solid white;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+            font-size: large;
+            margin-top: 20px;
+            cursor: pointer;
+            transition-property: all;
+            transition-duration: 0.4s;
+            transition-timing-function: linear;
+        }
+        #btn1_sec10:hover{
+            background-color: white;
+            color: black;
+        }
+        #btn2_sec10{
+            height: 40px;
+            width: 170px;
+            border: transparent;
+            border-radius: 5px;
+            background-color: rgb(34,34,34);
+            color: rgb(228,228,228);
+            font-size: large;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        #parabox_sec10{
+            height: 200px;
+            width: 600px;
+            /* border: 1px solid; */
+            margin-left: 150px;
+            margin-top: 30px;
+            display: inline-block;
+            vertical-align: top ;
+        }
+        #para1_sec10{
+            color: rgb(166,166,166);
+            text-align: justify;
+            line-height: 25px;
+        }
+
+
+
+
+        #sec11{
+            height: 140vh;
+            width: 100%;
+            background-color: rgb(0, 0, 0);
+            /* border: 1px solid white; */
+            padding: 1px;
+        }
+        #img1_sec11{
+            height: 280px;
+            width: 500px;
+            /* border: 1px solid white; */
+            margin-left: 150px;
+            background-image: url(./images/Model-S-Exterior-Grid-A-Desktop-Global.jpg);
+            background-position: center;
+            background-size: cover;
+            display: inline-block;
+            vertical-align: top
+        }
+
+        #witingbox1_sec11{
+            height: 280px;
+            width: 500px;
+            /* border: 1px solid white; */
+            display: inline-block;
+            margin-left: 100px;
+            vertical-align: top;
+        }
+
+        #w1_sec11{
+            color: white;
+            text-align: justify;
+            line-height: 23px;
+            margin-top: 50px;
+        }
+
+        #img2_sec11{
+            height: 280px;
+            width: 500px;
+            /* border: 1px solid white; */
+            margin-left: 100px;
+            background-image: url(./images/Model-S-Exterior-Grid-B-Desktop-Global.jpg);
+            background-position: center;
+            background-size: cover;
+            display: inline-block;
+            vertical-align: top
+        }
+
+        #witingbox2_sec11{
+            height: 280px;
+            width: 500px;
+            /* border: 1px solid white; */
+            display: inline-block;
+            margin-left: 150px;
+            vertical-align: top;
+        }
+
+        #w2_sec11{
+            color: white;
+            text-align: justify;
+            line-height: 23px;
+            margin-top: 50px;
+        }
+
+        #img3_sec11{
+            height: 280px;
+            width: 500px;
+            /* border: 1px solid white; */
+            margin-left: 150px;
+            background-image: url(./images/Model-S-Exterior-Grid-C-Desktop-Global.jpg);
+            background-position: center;
+            background-size: cover;
+            display: inline-block;
+            vertical-align: top
+        }
+        #witingbox3_sec11{
+            height: 280px;
+            width: 500px;
+            /* border: 1px solid white; */
+            display: inline-block;
+            margin-left: 100px;
+            vertical-align: top;
+        }
+        #w3_sec11{
+            color: white;
+            text-align: justify;
+            line-height: 23px;
+            margin-top: 50px;
+        }
+
+
+
+        #sec12{
+            height: 100vh;
+            width: 100%;
+            /* border: 1px solid; */
+            padding: 1px;
+            position: relative;
+        }
+        #vsdio1_sec12{
+            height: 100%;
+            width: 70%;
+            /* border: 1px solid; */
+            display: inline-block;
+            vertical-align: tp;
+            /* position: absolute; */
+        }
+        #vedio1_setting1_sec12{
+            height: 100%;
+            width: 100%;
+            /* position: absolute; */
+        }
+        #content_box1_sec12{
+            height: 100px;
+            width: 70%;
+            /* border: 2px solid red; */
+            position: absolute;
+            margin-top: -220px;
+        }
+        .internalbox{
+            height: 100%;
+            width: 28%;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+        }
+        #ibs1_heading1{
+            color: white;
+            text-align: center;
+            font-size: x-large;
+            font-weight: 100;
+        }
+        #ibs1_para1{
+            color: white;
+            text-align: center;
+            font-size: small;
+            line-height: 15px;
+            margin-top: 10px;
+        }
+        .ibs2{
+            margin-left: 60px;
+        }
+        #ibs2_heading1{
+            color: white;
+            text-align: center;
+            font-size: x-large;
+            font-weight: 100;
+        }
+        #ibs2_para1{
+            color: white;
+            text-align: center;
+            font-size: small;
+            line-height: 15px;
+            margin-top: 10px;
+        }
+        .ibs3{
+            margin-left: 60px;
+        }
+        #ibs3_heading1{
+            color: white;
+            text-align: center;
+            font-size: x-large;
+            font-weight: 100;
+        }
+        #ibs3_para1{
+            color: white;
+            text-align: center;
+            font-size: small;
+            line-height: 15px;
+            margin-top: 10px;
+        }
+
+
+
+
+        #vwiting_box1_sec12{
+            height: 100%;
+            width: 30%;
+            /* border: 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: -5px;
+        }
+        #wirtingbox{
+            height: 250px;
+            width: 350px;
+            /* border: 1px solid; */
+            margin: 60px auto;
+        }
+        #w1_sec12{
+            color: rgb(66,68,73);
+            font-weight: 100;
+        }
+        #w2_sec12{
+            color: rgb(23,26,32);
+            margin-top: 10px;
+            font-weight: 300;
+        }
+        #w3_sec12{
+            color: rgb(57,60,65);
+            text-align: justify;
+            line-height: 20px;
+            font-size: medium;
+            margin-top: 20px;
+        }
+        #btn1_sec12{
+            height: 35px;
+            width: 300px;
+            border: 2px solid black;
+            background-color: transparent;
+            color: #000;
+            font-size: large;
+            margin-top: 150px;
+            margin-left: 40px;
+            cursor: pointer;
+            transition-property: all;
+            transition-duration: 0.4s;
+            transition-timing-function: linear;
+        }
+        #btn1_sec12:hover{
+            background-color: black;
+            color: white;
+        }
+        #btn2_sec12{
+            height: 35px;
+            width: 300px;
+            border: white;
+            background-color: rgb(244,244,244);
+            color: rgb(123,125,128);
+            font-size: large;
+            margin-top: 20px;
+            margin-left: 40px;
+            cursor: pointer;
+        }
+
+
+        #sec13{
+            height: 43vh;
+            width: 100%;
+            /* border: 1px solid; */
+            padding: 1px;
+        }
+        #head1_sec1{
+            color: rgb(23,26,32);
+            margin-top: 130px;
+            margin-left: 150px;
+        }
+        #para1_sec13{
+            color: rgb(100,102,106);
+            margin-left: 150px;
+            margin-top: 20px;
+        }
+
+
+
+        #sec14{
+            height: 170vh;
+            width: 100%;
+            /* border: 1px solid; */
+            padding: 1px;
+        }
+        #img_sec14{
+            height: 100vh;
+            width: 95%;
+            /* border: 1px solid; */
+            margin: auto;
+            border-radius: 25px;
+            animation-name: maping;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes maping{
+            0%{
+                background-image: url(./images/SF-LA-Range-Map.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+            25%{
+                background-image: url(./images/SF-LA-Range-Map.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+            26%{
+                background-image: url(./images/map_berkeley_bg-2x.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+            50%{
+                background-image: url(./images/map_berkeley_bg-2x.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+            51%{
+                background-image: url(./images/map_florida_bg-2x.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+            75%{
+                background-image: url(./images/map_florida_bg-2x.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+            76%{
+                background-image: url(./images/map_newyork_bg-2x.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+            100%{
+                background-image: url(./images/map_newyork_bg-2x.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+        }
+
+        #main_witing_box1_sec14{
+            height: 150px;
+            width: 850px;
+            /* border: 1px solid black; */
+            margin: 80px auto;
+        }
+        .small_wirtingbox{
+            height: 100%;
+            width: 190px;
+            border-top: 2px solid black;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .swb1{
+            animation-name: swb1;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes swb1{
+            0%{
+                opacity: 1;
+            }
+            25%{
+                opacity: 1;
+            }
+            26%{
+                opacity: 0.4;
+            }
+            50%{
+                opacity: 0.4;
+            }
+            51%{
+                opacity: 0.4;
+            }
+            75%{
+                opacity: 0.4;
+            }
+            76%{
+                opacity: 0.4;
+            }
+            100%{
+                opacity: 0.4;
+            }
+        }
+        #swb1_w1{
+            color: rgb(23,26,32);
+            text-align: justify;
+            font-size: large;
+            margin-top: 15px;
+        }
+        #swb1_w2{
+            color: rgb(23,26,32);
+            text-align: justify;
+            /* font-size: large; */
+            margin-top: 15px;
+        }
+        .swb2{
+            margin-left: 20px;
+            animation-name: swb2;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes swb2{
+            0%{
+                opacity: 0.4;
+            }
+            25%{
+                opacity: 0.4;
+            }
+            26%{
+                opacity: 1;
+            }
+            50%{
+                opacity: 1;
+            }
+            51%{
+                opacity: 0.4;
+            }
+            75%{
+                opacity: 0.4;
+            }
+            76%{
+                opacity: 0.4;
+            }
+            100%{
+                opacity: 0.4;
+            }
+        }
+        #swb2_w1{
+            color: rgb(23,26,32);
+            text-align: justify;
+            font-size: large;
+            margin-top: 15px;
+        }
+        #swb2_w2{
+            color: rgb(23,26,32);
+            text-align: justify;
+            /* font-size: large; */
+            margin-top: 15px;
+        }
+        .swb3{
+            margin-left: 20px;
+            animation-name: swb3;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes swb3{
+            0%{
+                opacity: 0.4;
+            }
+            25%{
+                opacity: 0.4;
+            }
+            26%{
+                opacity: 0.4;
+            }
+            50%{
+                opacity: 0.4;
+            }
+            51%{
+                opacity: 1;
+            }
+            75%{
+                opacity: 1;
+            }
+            76%{
+                opacity: 0.4;
+            }
+            100%{
+                opacity: 0.4;
+            }
+        }
+        #swb3_w1{
+            color: rgb(23,26,32);
+            text-align: justify;
+            font-size: large;
+            margin-top: 15px;
+        }
+        #swb3_w2{
+            color: rgb(23,26,32);
+            text-align: justify;
+            /* font-size: large; */
+            margin-top: 35px;
+        }
+        .swb4{
+            margin-left: 20px;
+            animation-name: swb4;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes swb4{
+            0%{
+                opacity: 0.4;
+            }
+            25%{
+                opacity: 0.4;
+            }
+            26%{
+                opacity: 0.4;
+            }
+            50%{
+                opacity: 0.4;
+            }
+            51%{
+                opacity: 0.4;
+            }
+            75%{
+                opacity: 0.4;
+            }
+            76%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        #swb4_w1{
+            color: rgb(23,26,32);
+            text-align: justify;
+            font-size: large;
+            margin-top: 15px;
+        }
+        #swb4_w2{
+            color: rgb(23,26,32);
+            text-align: justify;
+            /* font-size: large; */
+            margin-top: 15px;
+        }
+        #btn1_sec14{
+            height: 40px;
+            width: 200px;
+            border: 3px solid black;
+            border-radius: 5px;
+            background-color: white;
+            color: rgb(111,113,117);
+            font-size: medium;
+            margin-left: 550px;
+            cursor: pointer;
+            transition-property: all;
+            transition-duration: 0.4s;
+            transition-timing-function: linear;
+        }
+        #btn1_sec14:hover{
+            background-color: #000;
+            color: white;
+        }
+
+
+
+        #sec15{
+            height: 100vh;
+            width: 100%;
+            /* border: 1px solid; */
+            padding: 1px;
+        }
+        #witing_maindiv1_sec15{
+            height: 100%;
+            width: 30%;
+            /* border: 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+        }
+        #md1_w1{
+            color: rgb(88,90,94);
+            margin-left: 40px;
+            margin-top: 50px;
+            font-size: large;
+        }
+        #md1_w2{
+            color: rgb(23,26,32);
+            text-align: justify;
+            font-weight: 100;
+            margin-left: 40px;
+            margin-top: 5px;
+        }
+        #md1_w3{
+            color: rgb(88,90,94);
+            margin-left: 40px;
+            margin-top: 50px;
+            font-size: large;
+        }
+        #md1_btn1O{
+            height: 35px;
+            width: 300px;
+            border: 3px solid black;
+            border-radius: 5px;
+            background-color: white;
+            color: rgb(88,90,94);
+            font-size: medium;
+            margin-top: 100px;
+            margin-left: 40px;
+            cursor: pointer;
+            transition-property: all;
+            transition-duration: 0.4s;
+            transition-timing-function: linear;
+        }
+        #md1_btn1O:hover{
+            background-color: black;
+            color: white;
+        }
+        #md2_btn1O{
+            height: 35px;
+            width: 300px;
+            border: transparent;
+            border-radius: 5px;
+            background-color: rgb(244,244,244);
+            color: rgb(88,90,94);
+            font-size: medium;
+            margin-top: 40px;
+            margin-left: 40px;
+            cursor: pointer;
+        }
+
+
+
+
+
+
+        #img_maindiv1_sec15{
+            height: 100%;
+            width: 70%;
+            /* border: 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: -5px;
+            background-image: url(./images/Model-S-Safety-Hero-Desktop-Global.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        #animated_box1_sec15{
+            height: 300px;
+            width: 250px;
+            /* border: 1px solid; */
+            margin-left: 100px;
+            margin-top: 60px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        #ab1_w1{
+            color: rgb(93,95,99);
+            font-size: small;
+            margin-left: 90px;
+            margin-top: 80px;
+            animation-name: ab1_w1;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+        }
+        @keyframes ab1_w1{
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        #ab1_black_line1{
+            height: 200px;
+            width: 4px;
+            /* background-color: #000; */
+            margin-left: 75px;
+            margin-top: -15px;
+        }
+        #line1_child1{
+            height: 90px;
+            width: 100%;
+            background-color:black;
+            animation-name: line1;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+        }
+        @keyframes line1{
+            0%{
+                transform: translateY(90px);
+            }
+            100%{
+                transform: translateY(0px);
+            }
+        }
+        #line1_child2{
+            height: 110px;
+            width: 100%;
+            background-color:black;
+        }
+        #ab1_cercil1{
+            height: 15px;
+            width: 15px;
+            border: 3px solid black;
+            border-radius: 50%;
+            background-color: white;
+            margin-top: 0px;
+            margin-left: 70px;
+        }
+        #animated_box2_sec15{
+            height: 180px;
+            width: 250px;
+            /* border: 1px solid; */
+            margin-left: 50px;
+            margin-top: 0px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        #ab2_w1{
+            color: rgb(93,95,99);
+            font-size: small;
+            margin-left: 80px;
+            margin-top: 35px;
+            animation-name: ab1_w2;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+        }
+        @keyframes ab1_w2{
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        #ab2_black_line1{
+            height: 120px;
+            width: 4px;
+            /* background-color: #000; */
+            margin-left: 70px;
+            margin-top: -15px;
+        }
+        #line2_child1{
+            height: 70px;
+            width: 100%;
+            background-color:black;
+            animation-name: line2;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+        }
+        @keyframes line2{
+            0%{
+                transform: translateY(50px);
+            }
+            100%{
+                transform: translateY(0px);
+            }
+        }
+        #line2_child2{
+            height: 50px;
+            width: 100%;
+            background-color:black;
+        }
+        #ab2_cercil1{
+            height: 15px;
+            width: 15px;
+            border: 3px solid black;
+            border-radius: 50%;
+            background-color: white;
+            margin-top: 0px;
+            margin-left: 65px;
+        }
+        #animated_box3_sec15{
+            height: 180px;
+            width: 250px;
+            /* border: 1px solid; */
+            margin-left: 390px;
+            margin-top: 40px;
+        }
+        #ab3_cercil1{
+            height: 15px;
+            width: 15px;
+            border: 3px solid black;
+            border-radius: 50%;
+            background-color: white;
+            margin-top: 0px;
+            margin-left: 65px;
+        }
+        #ab3_black_line1{
+            height: 120px;
+            width: 4px;
+            /* background-color: #000; */
+            margin-left: 70px;
+            margin-top: px;
+        }
+        #line3_child1{
+            height: 50px;
+            width: 100%;
+            background-color:black;
+        }
+        #line3_child2{
+            height: 70px;
+            width: 100%;
+            background-color:black;
+            animation-name: line3;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+        }
+        @keyframes line3{
+            0%{
+                height: 0px;
+            }
+            100%{
+                height: 70px;
+            }
+        }
+        #ab3_w1{
+            color: rgb(93,95,99);
+            font-size: small;
+            margin-left: 80px;
+            margin-top: -15px;
+            animation-name: ab1_w3;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+        }
+        @keyframes ab1_w3{
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+
+
+
+
+        #sec16{
+            height: 60vh;
+            width: 100%;
+            background-image: url(./images/Autopilot-Hero-Vision-Desktop.jpg);
+            background-position: center;
+            background-size: cover;
+            padding: 1px;
+        }
+        #main_witing1_box1_sec16{
+            height: 100%;
+            width: 300px;
+            /* border: 1px solid black; */
+            margin-left: 70px;
+        }
+        #w1_sec16{
+            color: rgb(0,0,0);
+            margin-top: 25px;
+        }
+        #w2_sec16{
+            color: rgb(103,103,103);
+            font-size: small;
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+        #w3_sec16{
+            color: rgb(0,0,0);
+            margin-top: 25px;
+        }
+        #w4_sec16{
+            color: rgb(103,103,103);
+            font-size: small;
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+        #circel_sec16{
+            height: 40px;
+            width: 40px;
+            background-color: white;
+            border: 3px solid;
+            border-radius: 50%;
+            margin-top: 25px;
+        }
+        #internal_cercil1_sec16{
+            height: 28px;
+            width: 28px;
+            background-color: black;
+            border-radius: 50%;
+            margin: 3px auto;
+            /* margin-top: 10px;
+            margin-left: 10px; */
+        }
+        #w5_sec16{
+            color: rgb(103,103,103);
+            font-size: small;
+            margin-top: 20px;
+            margin-left: 5px;
+            /* text-align: justify  ; */
+        }
+
+
+
+
+        #sec17{
+            height: 40vh;
+            width: 100%;
+            background-color: white;
+            padding: 1px;
+        }
+        #btnbox1_sec17{
+            height: 200px;
+            width: 300px;
+            /* border: 1px solid; */
+            margin-left: 150px;
+            margin-top: 50px;
+            display: inline-block;
+            vertical-align: top ;
+        }
+        #btnw1_sec17{
+            color: rgb(57,59,64);
+            font-size: large;
+        }
+        #btnpara1_sec17{
+            color: rgb(23,26,32);
+            margin-top: 5px;
+        }
+        #btn1_sec17{
+            height: 40px;
+            width: 170px;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: white;
+            color: rgb(133,135,138);
+            font-size: large;
+            margin-top: 20px;
+            cursor: pointer;
+            transition-property: all;
+            transition-duration: 0.4s;
+            transition-timing-function: linear;
+        }
+        #btn1_sec17:hover{
+            background-color: black;
+            color: white;
+        }
+        #btn2_sec17{
+            height: 40px;
+            width: 170px;
+            border: transparent;
+            border-radius: 5px;
+            background-color: rgb(244,244,244);
+            color: rgb(123,125,128);
+            font-size: large;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        #parabox_sec17{
+            height: 200px;
+            width: 600px;
+            /* border: 1px solid; */
+            margin-left: 150px;
+            margin-top: 30px;
+            display: inline-block;
+            vertical-align: top ;
+        }
+        #para1_sec17{
+            color: rgb(57,60,65);
+            text-align: justify;
+            line-height: 25px;
+        }
+
+
+
+
+        #sec18{
+            height: 43vh;
+            width: 100%;
+            /* border: 1px solid; */
+            padding: 1px;
+        }
+        #head1_sec18{
+            color: rgb(23,26,32);
+            margin-top: 130px;
+            margin-left: 150px;
+        }
+        #para1_sec18{
+            color: rgb(100,102,106);
+            margin-left: 150px;
+            margin-top: 20px;
+        }
+
+
+        #sec19{
+            height: 60vh;
+            width: 100%;
+            padding: 1px;
+            /* border: 1px solid; */
+        } 
+        #vedio1_div1_sec19{
+            height: 40vh;
+            width: 100%;
+            border: 1px solid;
+        }
+        
+
+
+
+
+
+
+
+
+
+        .section18{
+            height : 120vh;
+            width : 100%;
+            /* border : 1px solid; */
+            padding: 1px;
+            background-color: black;
+        }
+        .sec18_box1{
+            height : 600px;
+            width : 730px;
+            /* border : 1px solid white; */
+            padding: 1px;
+            display: inline-block;
+            vertical-align: top;
+            background-image: url(./images/Model-S-Specs-Hero-Desktop-LHD.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .sec18_box2{
+            height : 600px;
+            width : 600px;
+            /* border : 1px solid white; */
+            padding: 1px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .sec18box2_head1{
+            height : 50px;
+            width : 220px;
+            /* border : 1px solid white; */
+            padding: 1px;
+            margin-top: 40px;
+        }
+        .sec18box2head1_text{
+            font-family:  "Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-size: 28px;
+            font-weight: 500;
+            color : white
+        }
+        .sec18box2_btn1{
+            height : 30px;
+            width : 250px;
+            border : 2px solid white;
+            margin-top: 10px;
+            font-size: 12px;
+            font-weight: 500;
+            background-color: transparent;
+            color : white;
+            border-radius: 5px;
+            animation-name: btnfade1;
+            animation-duration: 12s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes btnfade1 {
+            0%{
+                opacity: 1;
+            }
+            50%{
+                opacity: 1;
+            }
+            51%{
+                opacity: .4;
+            }
+            100%{
+                opacity: .4;
+            }
+        }
+        .sec18box2_btn2{
+            height : 30px;
+            width : 250px;
+            border : 2px solid white;
+            margin-top: 10px;
+            font-size: 12px;
+            font-weight: 500;
+            background-color: transparent;
+            color: white;
+            border-radius: 5px;
+            animation-name: btnfade2;
+            animation-duration: 12s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes btnfade2 {
+            0%{
+                opacity: .4;
+            }
+            50%{
+                opacity: .4;
+            }
+            51%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        .sec18_slider{
+            height : 450px;
+            width : 480px;
+            /* border : 1px solid yellow; */
+            padding: 1px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+        .sec18_sliderbox{
+            height : 100%;
+            width : 200%;
+            /* border : 1px solid red; */
+            padding: 1px;
+            
+            animation-name: teslaspecs1;
+            animation-duration: 12s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        .sec18slide{
+            height: 100%;
+            width : 470px;
+            /* border : 1px solid green; */
+            padding : 1px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        @keyframes teslaspecs1 {
+            0%{
+                margin-left: 5px;
+            }
+            50%{
+                margin-left: 5px;
+            }
+            51%{
+                margin-left: -470px;
+            }
+            100%{
+                margin-left: -470px;
+
+            }
+        }
+        .sec18box2_info1{
+            
+        }
+        .o1_box1{
+            height : 100%;
+            width : 230px;
+            /* border : 1px solid red; */
+            padding: 1px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .o1_box2{
+            height : 100%;
+            width : 230px;
+            /* border : 1px solid red; */
+            padding: 1px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .sec18box2info1box1{
+            height : 72px;
+            width : 200px;
+            /* border : 1px solid white; */
+            padding: 1px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .sec18box2info1box2{
+            height : 72px;
+            width : 200px;
+            /* border : 1px solid white; */
+            padding: 1px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .n7{
+            height : 92px
+        }
+        .n8{
+            height : 105px
+        }
+        .n1_head1{
+            height : 30px;
+            width : 100%;
+            /* border-top :1px solid white; */
+            padding : 1px
+        }
+        .n1_head2{
+            height : 30px;
+            width : 100%;
+            /* border :1px solid white; */
+            padding : 1px
+        }
+        .n2_head1{
+            height : 30px;
+            width : 100%;
+            /* border :1px solid white; */
+            padding : 1px
+        }
+        .n2_head2{
+            height : 30px;
+            width : 100%;
+            /* border :1px solid white; */
+            padding : 1px
+        }
+        .n3_head1{
+            height : 30px;
+            width : 100%;
+            /* border :1px solid white; */
+            padding : 1px
+        }
+        .n3_head2{
+            height : 30px;
+            width : 100%;
+            /* border :1px solid white; */
+            padding : 1px
+        }
+        .n4_head1{
+            height : 30px;
+            width : 100%;
+            /* border :1px solid white; */
+            padding : 1px
+        }
+        .n4_head2{
+            height : 30px;
+            width : 100%;
+            /* border :1px solid white; */
+            padding : 1px
+        }
+        .n5_head1{
+            height : 30px;
+            width : 100%;
+            /* border :1px solid white; */
+            padding : 1px
+        }
+        .n5_head2{
+            height : 30px;
+            width : 100%;
+            /* border :1px solid white; */
+            padding : 1px
+        }
+        .n6_head1{
+            height : 30px;
+            width : 100%;
+            /* border :1px solid white; */
+            padding : 1px
+        }
+        .n6_head2{
+            height : 30px;
+            width : 100%;
+            /* border :1px solid white; */
+            padding : 1px
+        }
+        .n7_head1{
+            height : 30px;
+            width : 100%;
+            /* border :1px solid blue; */
+            padding : 1px
+        }
+        .n7_head2{
+            height : 60px;
+            width : 100%;
+            /* border :1px solid blue; */
+            padding : 1px
+        }
+        .n8_head1{
+            height : 30px;
+            width : 100%;
+            /* border :1px solid purple; */
+            padding : 1px
+        }
+        .n8_head2{
+            height : 30px;
+            width : 100%;
+            /* border :1px solid purple; */
+            padding : 1px
+        }
+        .n8_head3{
+            height : 40px;
+            width : 100%;
+            /* border :1px solid purple; */
+            padding : 1px
+        }
+        .n9_head1{
+            height : 30px;
+            width : 100%;
+            /* border :1px solid white; */
+            padding : 1px
+        }
+        .n9_head2{
+            height : 30px;
+            width : 100%;
+            /* border :1px solid white; */
+            padding : 1px
+        }
+        .n10_head1{
+            height : 30px;
+            width : 100%;
+            /* border :1px solid white; */
+            padding : 1px
+        }
+        .n10_head2{
+            height : 30px;
+            width : 100%;
+            /* border :1px solid white; */
+            padding : 1px
+        }
+        .n11_head1{
+            height : 30px;
+            width : 100%;
+            /* border :1px solid white; */
+            padding : 1px
+        }
+        .n11_head2{
+            height : 30px;
+            width : 100%;
+            /* border :1px solid white; */
+            padding : 1px
+        }
+        .n1head1_text{
+            color : white;
+            font-family:"Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif ;
+            font-weight: 500;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        .n1head2_text{
+            color : rgb(238, 238, 238);
+            font-family:"Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif ;
+            font-weight: 400;
+            font-size: 14px;
+            margin-top: 10px;
+
+        }
+        .n2head1_text{
+            color : white;
+            font-family:"Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif ;
+            font-weight: 500;
+            font-size: 14px;
+            margin-top: 20px;
+
+        }
+        .n2head2_text{
+            color : rgb(238, 238, 238);
+            font-family:"Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif ;
+            font-weight: 400;
+            font-size: 14px;
+            margin-top: 10px;
+
+        }
+        .n3head1_text{
+            color : white;
+            font-family:"Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif ;
+            font-weight: 500;
+            font-size: 14px;
+            margin-top: 20px;
+
+        }
+        .n3head2_text{
+            color : rgb(238, 238, 238);
+            font-family:"Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif ;
+            font-weight: 400;
+            font-size: 14px;
+            margin-top: 10px;
+
+        }
+        .n4head1_text{
+            color : white;
+            font-family:"Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif ;
+            font-weight: 500;
+            font-size: 14px;
+            margin-top: 20px;
+
+        }
+        .n4head2_text{
+            color : rgb(238, 238, 238);
+            font-family:"Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif ;
+            font-weight: 400;
+            font-size: 14px;
+            margin-top: 10px;
+
+        }
+        .n5head1_text{
+            color : white;
+            font-family:"Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif ;
+            font-weight: 500;
+            font-size: 14px;
+            margin-top: 20px;
+
+        }
+        .n5head2_text{
+            color : rgb(238, 238, 238);
+            font-family:"Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif ;
+            font-weight: 400;
+            font-size: 14px;
+            margin-top: 10px;
+
+        }
+        .n6head1_text{
+            color : white;
+            font-family:"Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif ;
+            font-weight: 500;
+            font-size: 14px;
+            margin-top: 20px;
+
+        }
+        .n6head2_text{
+            color : rgb(238, 238, 238);
+            font-family:"Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif ;
+            font-weight: 400;
+            font-size: 14px;
+            margin-top: 10px;
+
+        }
+        .n7head1_text{
+            color : white;
+            font-family:"Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif ;
+            font-weight: 500;
+            font-size: 14px;
+            margin-top: 20px;
+
+        }
+        .n7head2_text{
+            color : rgb(238, 238, 238);
+            font-family:"Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif ;
+            font-weight: 400;
+            font-size: 14px;
+            margin-top: 10px;
+
+        }
+        .n8head1_text{
+            color : white;
+            font-family:"Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif ;
+            font-weight: 500;
+            font-size: 14px;
+            margin-top: 20px;
+
+        }
+        .n8head2_text{
+            color : rgb(238, 238, 238);
+            font-family:"Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif ;
+            font-weight: 400;
+            font-size: 14px;
+            margin-top: 10px;
+
+        }
+        .n8head3_text{
+            color : rgb(238, 238, 238);
+            font-family:"Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif ;
+            font-weight: 400;
+            font-size: 14px;
+        }
+        .n9head1_text{
+            color : white;
+            font-family:"Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif ;
+            font-weight: 500;
+            font-size: 14px;
+            margin-top: 20px;
+
+        }
+        .n9head2_text{
+            color : rgb(238, 238, 238);
+            font-family:"Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif ;
+            font-weight: 400;
+            font-size: 14px;
+            margin-top: 10px;
+
+        }
+        .n10head1_text{
+            color : white;
+            font-family:"Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif ;
+            font-weight: 500;
+            font-size: 14px;
+            margin-top: 20px;
+
+        }
+        .n10head2_text{
+            color : rgb(238, 238, 238);
+            font-family:"Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif ;
+            font-weight: 400;
+            font-size: 14px;
+            margin-top: 10px;
+
+        }
+        .n11head1_text{
+            color : white;
+            font-family:"Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif ;
+            font-weight: 500;
+            font-size: 14px;
+            margin-top: 20px;
+
+        }
+        .n11head2_text{
+            color : rgb(238, 238, 238);
+            font-family:"Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif ;
+            font-weight: 400;
+            font-size: 14px;
+            margin-top: 10px;
+
+        }
+        .head1_line{
+            height : 1px;
+            width : 35px;
+            background-color: rgba(255, 255, 255, 0.493);
+        }
+        .o2_box1{
+            height : 100%;
+            width : 230px;
+            /* border : 1px solid red; */
+            padding: 1px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .o2_box2{
+            height : 100%;
+            width : 230px;
+            /* border : 1px solid red; */
+            padding: 1px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .sec18box2info2box1{
+            height : 72px;
+            width : 200px;
+            /* border : 1px solid white; */
+            padding: 1px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .sec18box2info2box2{
+            height : 72px;
+            width : 200px;
+            /* border : 1px solid white; */
+            padding: 1px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .bottom_btn{
+            height : 35px;
+            width : 200px;
+            margin-left : 560px;
+            margin-top: 50px;
+            position: relative;
+            border: 3px solid white;
+            background-color: transparent;
+            color : white;
+            font-size: 15px;
+            font-weight: 500;
+            transition-property: all;
+            transition-duration: .3s;
+            transition-timing-function: linear;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .bottom_btn:hover{
+            color: black;
+            background-color: white;
+        }
+        .bottombtn_cate{
+            position: absolute;
+            height : 25px;
+            width : 80px;
+            /* border : 1px solid; */
+            background-color: white;
+            left : 200px;
+            visibility: hidden;
+            transition-property: all;
+            transition-duration: .3s;
+            transition-timing-function: linear;
+        }
+        .bottom_btn:hover .bottombtn_cate{
+            visibility: visible;
+        }
+        .bottombtncate_text{
+            margin-top: 3px;
+            color : black
+        }
+
+
+
+
+
+
+
+        .section19{
+            height : 130vh;
+            width: 100%;
+            /* border : 1px solid; */
+            padding: 1px;
+        }
+        .sec19_content{
+            height : 250px;
+            width : 650px;
+            /* border : 1px solid; */
+            padding: 1px;
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 200px;
+        }
+        .sec19con_head{
+            height : 40px;
+            width : 150px;
+            /* border : 1px solid; */
+            padding: 1px;
+            margin-left: 80px;
+            margin-top: 80px;
+        }
+        .sec19conhead_text{
+            font-size: 28px;
+            font-weight: 500;
+            color: rgb(23, 26, 32);
+        }
+        .sec19_btn1{
+            margin-top: 30px;
+            margin-left: 80px;
+            height : 35px;
+            width : 180px;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: white;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            transition-property: all;
+            transition-duration: .3s;
+            transition-timing-function: linear;
+            position: relative;
+        }
+        
+        .sec19_btn1:hover{
+            background-color: black;
+            color: white;
+        }
+        .sec19btn1_cate{
+            position: absolute;
+            height : 25px;
+            width : 80px;
+            /* border : 1px solid; */
+            background-color: white;
+            left : 100px;
+            top: 30px;
+            visibility: hidden;
+            transition-property: all;
+            transition-duration: .3s;
+            transition-timing-function: linear;
+        }
+        .sec19_btn1:hover .sec19btn1_cate{
+            visibility: visible;
+        }
+        .sec19btn1_text{
+            margin-top: 3px;
+            color : black
+        }
+        .sec19_btn2{
+            height : 35px;
+            width : 180px;
+            border-radius: 5px;
+            margin-left: 20px;
+            font-size: 15px;
+            font-weight: 500;
+            border: transparent;
+            cursor: pointer;
+            transition-property: all;
+            transition-duration: .3s;
+            transition-timing-function: linear;
+            position: relative;
+        }
+        .sec19_btn2:hover{
+            color: black;
+            background-color: white;
+        }
+        .sec19btn2_cate{
+            position: absolute;
+            height : 25px;
+            width : 100px;
+            /* border : 1px solid; */
+            background-color: white;
+            left : 100px;
+            top: 30px;
+            visibility: hidden;
+            transition-property: all;
+            transition-duration: .3s;
+            transition-timing-function: linear;
+        }
+        .sec19_btn2:hover .sec19btn2_cate{
+            visibility: visible;
+        }
+        .sec19_image{
+            height : 250px;
+            width : 670px;
+            /* border : 1px solid; */
+            padding: 1px;
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 200px;
+            background-image: url(./images/Model-S-Order-Hero-Desktop-Mobile-LHD.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .sec19_para{
+            height : 70px;
+            width : 900px;
+            /* border : 1px solid; */
+            padding: 1px;
+            margin: auto;
+            margin-top: 150px;
+        }
+        .sec19_underline{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .sec19_underline:hover{
+            text-decoration: 2px underline;
+        }
+        .sec19para_text{
+            font-family: "Gotham SSm", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color : rgb(23, 26, 32);
+            text-align: center;
+        }
+        .sec19_ul{
+            width : max-content;
+            /* border : 1px solid; */
+            margin: auto;
+            margin-top: 80px;
+            font-size: 14px;
+            font-weight: 500;
+            color: rgb(92, 94, 98);
+        }
+        .sec19_list{
+            list-style: none;
+            display: inline;
+            margin-left: 10px;
+            cursor: pointer;
+            position: relative;
+        }
+        .sec19_teslacate{
+            height : 20px;
+            width : 180px;
+            /* border : 1px solid; */
+            background-color: white;
+            position: absolute;
+            left : 20px;
+            top : 25px;
+            text-align: center;
+            visibility: hidden;
+            transition-property: all;
+            transition-duration: .3s;
+            transition-timing-function: linear;
+
+        }
+        .sec19_list:hover .sec19_teslacate{
+            visibility: visible;
+        }
+
+
+
+
+
+
+        #sec20{
+            height: 30vh;
+            width: 100%;
+            border: 2px solid;
+            padding: 1px;
+        }
+    </style>
+</head>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<body>
+    <div id="sec1">
+        <nav id="navbar1_sec1">
+            <div id="nav1_sec1_logo1"></div>
+            <ul class="nav1_ul1_sec1">
+                <li id="sec1_list1">Model S
+                    <div id="modelS_category">
+                        <p id="modelS_category_w1">Model S</p>
+                    </div>
+                </li>
+                <li id="sec1_list1">Model 3
+                    <div id="model3_category">
+                        <p id="model3_category_w1">Model 3</p>
+                    </div>
+                </li>
+                <li id="sec1_list1">Model X
+                    <div id="modelx_category">
+                        <p id="modelx_category_w1">Model X</p>
+                    </div>
+                </li>
+                <li id="sec1_list1">Model Y
+                    <div id="modely_category">
+                        <p id="modely_category_w1">Model Y</p>
+                    </div>
+                </li>
+                <li id="sec1_list1">Solar Roof
+                    <div id="SolarRoof_category">
+                        <p id="SolarRoof_category_w1">Solar Roof</p>
+                    </div>
+                </li>
+                <li id="sec1_list1">Solar Panels
+                    <div id="SolarPanels_category">
+                        <p id="SolarPanels_category_w1">Solar Panels</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="nav1_ul2_sec1">
+                <li id="sec1_list2">Shop
+                    <div id="Shop_category">
+                        <p id="Shop_category_w1">Shop</p>
+                    </div>
+                </li>
+                <li id="sec1_list2">Account
+                    <div id="Account_category">
+                        <p id="Account_category_w1">Account</p>
+                    </div>
+                </li>
+                <li id="sec1_list2">Menu
+                    <div id="Menu_category">
+                        <p id="Menu_category_w1">Menu</p>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div id="main_witing_box1_sec1">
+            <h1 id="sec1_w1">Model S</h1>
+            <h4 id="sec1_w2">Plaid</h4>
+        </div>
+        <div id="long_div1_sec1">
+            <div class="internal_box_sec1 in1">
+                <h2 id="in1_w1">396mi</h2>
+                <p id="in1_w2">Range (EPA est.)</p>
+            </div>
+            <div class="internal_box_sec1 in2">
+                <h2 id="in2_w1">1.99s</h2>
+                <p id="in2_w2">0-60 mph*</p>
+            </div>
+            <div class="internal_box_sec1 in3">
+                <h2 id="in3_w1">200mph</h2>
+                <p id="in3_w2">Top Speed†</p>
+            </div>
+            <div class="internal_box_sec1 in4">
+                <h2 id="in4_w1">1,020hp</h2>
+                <p id="in4_w2">Peak Power</p>
+            </div>
+            <button id="btn1_sec1">Order Now</button>
+        </div>
+        <div id="circel1_sec1">
+            <div id="sub_c2_sec1"></div>
+            <div id="sub_c3_sec1"><i class="fa-solid fa-comment-dots c3"></i></div>
+        </div>
+    </div>
+
+
+    <div id="sec2">
+        <div id="main_text1_sec2">
+            <h1 id="text1_sec2" data-aos="fade-up">Interior of the Future </h1>
+        </div>
+    </div>
+
+
+
+    <div id="sec3"></div>
+
+
+    <div id="sec4">
+        <div class="mainslider_sec4">
+            <div class="slider_box_sec5">
+                <div class="slide1_sec4 sl1">
+                    <div id="sl1_v1">
+                        <video id="vedio1_sec4" src="https://tesla-cdn.thron.com/delivery/public/video/tesla/9a153db3-198b-4502-98bc-3bc6041597fd/bvlatuR/WEBHD/model-s-interior-carousel-1-cinematic-display-desktop-global" autoplay loop controls muted></video>
+                        <video id="vedio2_sec4" src="https://tesla-cdn.thron.com/delivery/public/video/tesla/c39b1f9b-dfe6-4e45-a0d7-0156ff7d2706/bvlatuR/WEBHD/MS-Interior-Carousel-2-Yoke-Desktop" autoplay loop controls muted></video>
+                        <video id="vedio3_sec4" src="https://tesla-cdn.thron.com/delivery/public/video/tesla/9b04a9fb-e4ea-4198-9d3e-7837feccef68/bvlatuR/WEBHD/Model-S-Interior-Carousel-4-Second-Row-Desktop" autoplay loop controls muted></video>
+                        <video id="vedio4_sec4" src="https://tesla-cdn.thron.com/delivery/public/video/tesla/1bf7b386-3f34-4d30-b71d-ecde610b9868/bvlatuR/WEBHD/Model-S-Interior-Carousel-3-Perfect-Environment-Desktop" autoplay loop controls muted></video>
+                        <video id="vedio5_sec4" src="https://tesla-cdn.thron.com/delivery/public/video/tesla/66dae454-284f-41e6-b730-1773e87126f0/bvlatuR/WEBHD/MS-Interior-Carousel-5-Gaming-Mobile" autoplay loop controls muted></video>
+                    </div>
+                    <div id="sl1_witing_box1">
+                        <div id="sl1_circel1"></div>
+                        <div id="sl1_circel2"></div>
+                        <div id="sl1_circel3"></div>
+                        <div id="sl1_circel4"></div>
+                        <div id="sl1_circel5"></div>
+                        <h3 id="sl1_w1">Cinematic Experience</h3>
+                        <p id="sl1_para1">A 17” touchscreen with left-right tilt offers 2200 x 1300 resolution, true
+                            colors and <br> exceptional responsiveness for gaming, movies and more.</p>
+                    </div>
+                </div>
+                <div class="slide1_sec4 sl2">
+                    <div id="sl2_v1"></div>
+                    <div id="sl2_witing_box1">
+                        <div id="sl2_circel1"></div>
+                        <div id="sl2_circel2"></div>
+                        <div id="sl2_circel3"></div>
+                        <div id="sl2_circel4"></div>
+                        <div id="sl2_circel5"></div>
+                        <h3 id="sl2_w1">Yoke Steering</h3>
+                        <p id="sl2_para1">A bold new approach gives you a true connection to Model S, offering better
+                            <br> steering feel and unobstructed views of your dash and the road ahead. Tap the <br>
+                            brake and Model S automatically selects the correct direction to start your trip.</p>
+                    </div>
+                </div>
+                <div class="slide1_sec4 sl3">
+                    <div id="sl3_v1"></div>
+                    <div id="sl3_witing_box1">
+                        <div id="sl3_circel1"></div>
+                        <div id="sl3_circel2"></div>
+                        <div id="sl3_circel3"></div>
+                        <div id="sl3_circel4"></div>
+                        <div id="sl3_circel5"></div>
+                        <h3 id="sl3_w1">Perfect Environment</h3>
+                        <p id="sl3_para1">Air vents are hidden throughout the cabin, while tri-zone temperature
+                            controls, <br> ventilated seats and HEPA filtration deliver the perfect environment.</p>
+                    </div>
+                </div>
+                <div class="slide1_sec4 sl4">
+                    <div id="sl4_v1"></div>
+                    <div id="sl4_witing_box1">
+                        <div id="sl4_circel1"></div>
+                        <div id="sl4_circel2"></div>
+                        <div id="sl4_circel3"></div>
+                        <div id="sl4_circel4"></div>
+                        <div id="sl4_circel5"></div>
+                        <h3 id="sl4_w1">Redesigned Second Row</h3>
+                        <p id="sl4_para1">Seating for three adults, with extra legroom, headroom and a stowable armrest
+                            with <br> integrated storage and wireless charging.</p>
+                    </div>
+                </div>
+                <div class="slide1_sec4 sl5">
+                    <div id="sl5_v1"></div>
+                    <div id="sl5_witing_box1">
+                        <div id="sl5_circel1"></div>
+                        <div id="sl5_circel2"></div>
+                        <div id="sl5_circel3"></div>
+                        <div id="sl5_circel4"></div>
+                        <div id="sl5_circel5"></div>
+                        <h3 id="sl5_w1">Console-Grade Gaming</h3>
+                        <p id="sl5_para1">Up to 10 teraflops of processing power unlock in-car gaming on-par with
+                            today’s <br> newest consoles. Play from any seat with wireless controller and headset <br>
+                            compatibility.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="sec5">
+        <div id="img1_sec5" data-aos="fade-up"></div>
+        <div id="witingbox1_sec5" data-aos="fade-up">
+            <p id="w1_sec5"><b>Stay Connected</b> <br> <br>Instantly connect with multi-device Bluetooth, or fast <br>
+                charge devices with wireless and 36-watt USB-C <br> charging.</p>
+        </div>
+        <div id="witingbox2_sec5" data-aos="fade-up">
+            <p id="w2_sec5"><b>Immersive Sound</b> <br> <br>A 22-speaker, 960-watt audio system with Active Road <br>
+                Noise Reduction offers immersive listening and studio-<br> grade sound quality.</p>
+        </div>
+        <div id="img2_sec5" data-aos="fade-up"></div>
+        <div id="img3_sec5" data-aos="fade-up"></div>
+        <div id="witingbox3_sec5" data-aos="fade-up">
+            <p id="w3_sec5"><b>Room for Everything</b> <br> <br>With front and rear trunks and fold-flat seats you
+                can<br> fit your bike without taking the wheel off—and your <br> luggage too.</p>
+        </div>
+    </div>
+
+
+    <div id="sec6">
+        <div id="witing_box1_sec6">
+            <div class="wbox_sec6 wbox1">
+                <h2 id="wbox1_w1">1,020hp</h2>
+                <p id="wbox1_para1">Peak Power</p>
+            </div>
+            <div class="wbox_sec6 wbox2">
+                <h2 id="wbox2_w1">9.23s</h2>
+                <p id="wbox2_para1">@155 mph 1/4 mile</p>
+            </div>
+            <div class="wbox_sec6 wbox3">
+                <h2 id="wbox3_w1">1.99s</h2>
+                <p id="wbox3_para1">0-60 mph*</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="sec7">
+        <div id="btnbox1">
+            <p id="btnw1"data-aos="fade-up">Plaid</p>
+            <h2 id="btnpara1"data-aos="fade-up">Beyond Ludicrous</h2>
+            <button id="btn1"data-aos="fade-up">Order Now</button>
+            <button id="btn2">View Inventory </button>
+        </div>
+        <div id="parabox_sec7">
+            <p id="para1_sec7"data-aos="fade-up">Model S Plaid has the quickest acceleration of any vehicle in production. Updated battery architecture for all Model S trims enables back-to-back track runs without <br> performance degradation. <span id="underline1">Chat with a Tesla Advisor</span> to learn more about Model S or <br> <span id="underline2">schedule a demo drive</span> today.</p>
+        </div>    
+    </div>
+
+    <div id="sec8">
+        <div id="para_box1_sec8">
+            <h1 id="heading1_sec8"data-aos="fade-up">Electric Powertrain</h1>
+            <p id="para1_sec8"data-aos="fade-up">Model S platforms unite powertrain and battery technologies for unrivaled performance, range and <br> efficiency. New module and pack thermal architecture allows faster charging and gives you more power <br> and endurance in all conditions.</p>
+        </div>
+        <div id="white_box1_sec8"></div>
+        <div id="animated_box_sec8">
+            <div class="anibox boxani1">
+                <h3 id="ani1_h1">Model S</h3>
+                <p id="ani1_p1">Dual Motor ALL-Wheel Drive unlocks more range than any other <br>vehicle in our crruent lineup, whit insane power & maximum <br>cntrol. </p>
+                <div class="ani1_boxes a1">
+                    <h2 id="a1_h1">3.1 s</h2>
+                    <p id="a1_p1">0-60mph</p>
+                </div>
+                <div class="ani1_boxes a2">
+                    <h2 id="a2_h1">405 mi</h2>
+                    <p id="a2_p1">Range (EPA est)</p>
+                </div>
+                <div class="ani1_boxes a3">
+                    <h2 id="a3_h1">670 hp</h2>
+                    <p id="a3_p1">Peak Power</p>
+                </div>
+            </div>
+            <div class="anibox boxani2">
+                <h3 id="ani2_h1">Model S Plaid</h3>
+                <p id="ani2_p1">Maintain 1,000+ horsepower al0l the way to 200 mph with Tri-Motor<br>All+Wheel Drive, featuring torque vectoring & three independent<br>carbon-sleeved rotors.</p>
+                <div class="ani2_boxes a4">
+                    <h2 id="a4_h1">1.99*</h2>
+                    <p id="a4_p1">0-60mph</p>
+                </div>
+                <div class="ani1_boxes a5">
+                    <h2 id="a5_h1">4396 mi</h2>
+                    <p id="a5_p1">Range (EPA est)</p>
+                </div>
+                <div class="ani1_boxes a6">
+                    <h2 id="a6_h1">1,020 hp</h2>
+                    <p id="a6_p1">Peak Power</p>
+                </div>
+            </div>
+        </div>
+        <div id="last_w1_sec8">* With rollout subtracted</div>
+    </div>
+
+    <div id="sec9">
+        <!-- <img src="./images/Model-S-Exterior-Hero-Mobile-Global.jpg" height="100%" width="100%" alt=""> -->
+    </div>
+
+
+    <div id="sec10">
+        <div id="btnbox1_sec10">
+            <p id="btnw1_sec10"data-aos="fade-up">Extiror</p>
+            <h2 id="btnpara1_sec10"data-aos="fade-up">Designed for efficiency</h2>
+            <button id="btn1_sec10"data-aos="fade-up">Order Now</button>
+            <button id="btn2_sec10">View Inventory </button>
+        </div>
+        <div id="parabox_sec10">
+            <p id="para1_sec10"data-aos="fade-up">With a drag coefficient of just .208 Cd, the lowest on the planet, Model S is built for <br> speed, endurance and range. Improved aerodynamics and a wider chassis offer <br> more responsive performance so you can take corners quicker and with more <br> confidence. </p>
+        </div>    
+    </div>
+
+
+    <div id="sec11">
+        <div id="img1_sec11" data-aos="fade-up"></div>
+        <div id="witingbox1_sec11" data-aos="fade-up">
+            <p id="w1_sec11"><b>Relentless Performance</b> <br> <br>Staggered, performance wheels and tires keep the car<br>
+                planted and help transfer maximum power down to the<br>road.</p>
+        </div>
+        <div id="witingbox2_sec11" data-aos="fade-up">
+            <p id="w2_sec5"><b>Optimized Aerodynamics</b> <br> <br>Attention to detail on all exterior surfaces makes Model<br>
+                S the most aerodynamic production car on Earth.</p>
+        </div>
+        <div id="img2_sec11" data-aos="fade-up"></div>
+        <div id="img3_sec11" data-aos="fade-up"></div>
+        <div id="witingbox3_sec11" data-aos="fade-up">
+            <p id="w3_sec11"><b>Refined Styling</b> <br> <br>An iconic silhouette meets refreshed, elegant<br>  proportions.</p>
+        </div>
+    </div>
+
+
+
+    <div id="sec12">
+        <div id="vsdio1_sec12">
+            <video id="vedio1_setting1_sec12" src="./images/Plaid-Range-Web-Desktop-8mb.mp4" autoplay loop controls muted ></video>
+            <div id="content_box1_sec12">
+                <div class="internalbox ibs1">
+                    <h3 id="ibs1_heading1">405mi</h3>
+                    <p id="ibs1_para1">Go anywhere with up to 405 miles of <br> estimated range on a single charge</p>
+                </div>
+                <div class="internalbox ibs2">
+                    <h3 id="ibs2_heading1">15min</h3>
+                    <p id="ibs2_para1">Recharge up to 200 miles in 15 minutes at <br> Supercharger locations</p>
+                </div>
+                <div class="internalbox ibs3">
+                    <h3 id="ibs3_heading1">40,000+</h3>
+                    <p id="ibs3_para1">Superchargers placed along popular <br> routes</p>
+                </div>
+            </div>
+        </div>
+        <div id="vwiting_box1_sec12">
+            <div id="wirtingbox">
+                <h3 id="w1_sec12" data-aos="fade-up">Range</h3>
+                <h1 id="w2_sec12" data-aos="fade-up">Go Anywhere</h1>
+                <p id="w3_sec12" data-aos="fade-up">With up to 405 miles of estimated range and <br> access to the world’s largest and most <br> powerful fast charging network, you’ll spend <br> less time plugged in and more time on the <br> road. Chat with a Tesla Advisor to learn more <br> about Model S or schedule a demo drive <br> today.</p>
+            </div>
+            <button id="btn1_sec12" data-aos="fade-up">Order Now</button>
+            <button id="btn2_sec12">Find My Route</button>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div id="sec13">
+        <h1 id="head1_sec1"data-aos="fade-up">Freedom to Travel</h1>
+        <p id="para1_sec13">Enter a destination on your touchscreen and Trip Planner will automatically calculate your route with Superchargers along the way.</p>
+    </div>
+
+
+
+
+
+
+
+    <div id="sec14">
+        <div id="img_sec14"></div>
+        <div id="main_witing_box1_sec14">
+            <div class="small_wirtingbox swb1">
+                <h4 id="swb1_w1">San Francisco to Los <br> Angeles</h4>
+                <h1 id="swb1_w2">383 miles</h1>
+            </div>
+            <div class="small_wirtingbox swb2">
+                <h4 id="swb2_w1">Berkeley to Lake<br>Tahoe</h4>
+                <h1 id="swb2_w2">178 miles</h1>
+            </div>
+            <div class="small_wirtingbox swb3">
+                <h4 id="swb3_w1">Manhattan to Boston</h4>
+                <h1 id="swb3_w2">211 miles</h1>
+            </div>
+            <div class="small_wirtingbox swb4">
+                <h4 id="swb4_w1">Fort Lauderdale to <br>Orlando</h4>
+                <h1 id="swb4_w2">195 miles</h1>
+            </div>
+        </div>
+        <button id="btn1_sec14">Learn More</button>
+    </div>
+
+
+    
+
+
+
+
+    <div id="sec15">
+        <div id="witing_maindiv1_sec15">
+            <p id="md1_w1">Safety</p>
+            <h1 id="md1_w2">High Impact <br> Protection</h1>
+            <p id="md1_w3">Model S is built from the ground up as an <br> electric vehicle, with a high-strength <br> architecture and floor-mounted battery <br> pack for incredible occupant protection and <br> low rollover risk. Every new Model S <br> includes Tesla’s latest active safety features, <br> such as Automatic Emergency Braking, at <br> no extra cost.</p>
+            <button id="md1_btn1O">Order Now</button>
+            <button id="md2_btn1O">View Inventory</button>
+        </div>
+        <div id="img_maindiv1_sec15">
+            <div id="animated_box1_sec15">
+                <p id="ab1_w1">Front-Impact Protection</p>
+                <div id="ab1_black_line1">
+                    <div id="line1_child1"></div>
+                    <div id="line1_child2"></div>
+                </div>
+                <div id="ab1_cercil1"></div>
+            </div>
+            <div id="animated_box2_sec15">
+                <p id="ab2_w1">Side-Impact Protection</p>
+                <div id="ab2_black_line1">
+                    <div id="line2_child1"></div>
+                    <div id="line2_child2"></div>
+                </div>
+                <div id="ab2_cercil1"></div>
+            </div>
+            <div id="animated_box3_sec15">
+                <div id="ab3_cercil1"></div>
+                <div id="ab3_black_line1">
+                    <div id="line3_child1"></div>
+                    <div id="line3_child2"></div>
+                </div>
+                <p id="ab3_w1">Very Low Rollover Risk</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+       
+    <div id="sec16">
+        <div id="main_witing1_box1_sec16">
+            <h1 id="w1_sec16">360°</h1>
+            <p id="w2_sec16">Rear, side and forward-facing cameras <br> provide maximum visibility</p>
+            <h1 id="w3_sec16">250 m</h1>
+            <p id="w4_sec16">Powerful visual processing at up to 250<br> meters of range</p>
+            <div id="circel_sec16">
+                <div id="internal_cercil1_sec16"></div>
+            </div>
+                <p id="w5_sec16">Tesla Vision detects nearby cars, helps<br>prevent potential collisions and assists <br>with parking </p>
+        </div>
+    </div>
+
+
+    <div id="sec17">
+        <div id="btnbox1_sec17">
+            <p id="btnw1_sec17"data-aos="fade-up">Autopilot</p>
+            <h2 id="btnpara1_sec17"data-aos="fade-up">Future of Driving</h2>
+            <button id="btn1_sec17"data-aos="fade-up">Order Now</button>
+            <button id="btn2_sec17">View Inventory </button>
+        </div>
+        <div id="parabox_sec17">
+            <p id="para1_sec17"data-aos="fade-up">With a drag coefficient of just .208 Cd, the lowest on the planet, Model S is built for <br> speed, endurance and range. Improved aerodynamics and a wider chassis offer <br> more responsive performance so you can take corners quicker and with more <br> confidence. </p>
+        </div>    
+    </div>
+
+
+
+    <div id="sec18">
+        <h1 id="head1_sec18"data-aos="fade-up">Features</h1>
+        <p id="para1_sec18">Enhanced Autopilot and Full Self-Driving capability introduce additional features and improve existing <br> functionality to make your car more capable over time, including:</p>
+    </div>
+
+
+    <div id="sec19">
+        <div id="vedio1_div1_sec19"></div>
+    </div>
+
+    <div id="sec20">
+
+    </div>
+
+
+
+    <div class="section18">
+        <div class = "sec18_box1"></div>
+            <div class = "sec18_box2">
+                <div class = "sec18box2_head1">
+                    <h3 class = "sec18box2head1_text">Model S Specs</h3>
+                </div>
+                <button class = "sec18box2_btn1">Model S Plaid</button>
+                <button class = "sec18box2_btn2">Model S</button>
+                <div class = "sec18_slider">
+                    <div class = "sec18_sliderbox">
+                        <div class = "sec18slide o1">
+                            <div class = "o1_box1">
+                                <div class = "sec18box2info1box1 n1">
+                                    <div class = "n1_head1">
+                                        <div class = "head1_line"></div>
+                                        <h3 class = "n1head1_text">Range (EPA est.)</h3>
+                                    </div>
+                                        <div class = "n1_head2">
+                                        <h3 class = "n1head2_text">396 mi</h3>
+
+                                    </div>
+                                </div>
+                            <div class = "sec18box2info1box1 n2">
+                                <div class = "n2_head1">
+                                    <div class = "head1_line"></div>
+                                    <h3 class = "n2head1_text">1/4 Mile</h3>
+
+                                </div>
+                                <div class = "n2_head2">
+                                    <h3 class = "n2head2_text">9.23@155 mph trap speed</h3>
+
+                                </div>
+                            </div>
+                            <div class = "sec18box2info1box1 n3">
+                                <div class = "n3_head1">
+                                    <div class = "head1_line"></div>
+                                    <h3 class = "n3head1_text">Peak Power</h3>
+                                </div>
+                                <div class = "n3_head2">
+                                    <h3 class = "n3head2_text">1,020 hp</h3>
+                                </div>
+                            </div>
+                            <div class = "sec18box2info1box1 n4">
+                                <div class = "n4_head1">
+                                    <div class = "head1_line"></div>
+                                    <h3 class = "n4head1_text">Wheels</h3>
+                                </div>
+                                <div class = "n4_head2">
+                                    <h3 class = "n4head2_text">19" or 21"</h3>
+                                </div>
+                            </div>
+                            <div class = "sec18box2info1box1 n5">
+                                <div class = "n5_head1">
+                                    <div class = "head1_line"></div>
+                                    <h3 class = "n5head1_text">Cargo</h3>
+                                </div>
+                                <div class = "n5_head2">
+                                    <h3 class = "n5head2_text">28 cu ft</h3>
+                                </div>
+                            </div>
+                            <div class = "sec18box2info1box1 n6">
+                                <div class = "n6_head1">
+                                    <div class = "head1_line"></div>
+                                    <h3 class = "n6head1_text">Weight</h3>
+                                </div>
+                                <div class = "n6_head2">
+                                    <h3 class = "n6head2_text">4,766 lbs</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "o1_box2">
+                            <div class = "sec18box2info1box2 n7">
+                                <div class = "n7_head1">
+                                    <div class = "head1_line"></div>
+                                    <h3 class = "n7head1_text">*Acceleration</h3>
+                                </div>
+                                <div class = "n7_head2">
+                                    <h3 class = "n7head2_text">1.99 s 0-60 mph<br>
+                                        with rollout subtracted</h3>
+                                </div>
+                            </div>
+                            <div class = "sec18box2info1box2 n8">
+                                <div class = "n8_head1">
+                                    <div class = "head1_line"></div>
+                                    <h3 class = "n8head1_text">†Top Speed</h3>
+                                </div>
+                                <div class = "n8_head2">
+                                    <h3 class = "n8head2_text">200 mph</h3>
+                                </div>
+                                <div class = "n8_head3">
+                                    <h3 class = "n8head3_text">when equipped with paid <br>hardware upgrades</h3>
+                                </div>
+                            </div>
+                            <div class = "sec18box2info1box2 n9">
+                                <div class = "n9_head1">
+                                    <div class = "head1_line"></div>
+                                    <h3 class = "n9head1_text">Drag Coefficient</h3>
+                                </div>
+                                <div class = "n9_head2">
+                                    <h3 class = "n9head2_text">0.208 Cd</h3>
+                                </div>
+                            </div>
+                            <div class = "sec18box2info1box2 n10">
+                                <div class = "n10_head1">
+                                    <div class = "head1_line"></div>
+                                    <h3 class = "n10head1_text">Powertrain</h3>
+                                </div>
+                                <div class = "n10_head2">
+                                    <h3 class = "n10head2_text">Tri Motor</h3>
+                                </div>
+                            </div>
+                            <div class = "sec18box2info1box2 n11">
+                                <div class = "n11_head1">
+                                    <div class = "head1_line"></div>
+                                    <h3 class = "n11head1_text">Supercharging Max</h3>
+                                </div>
+                                <div class = "n11_head2">
+                                    <h3 class = "n11head2_text">250 kW</h3>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class = "sec18slide o2">
+                        <div class = "o2_box1">
+                            <div class = "sec18box2info2box1 p1">
+                                <div class = "n1_head1">
+                                    <div class = "head1_line"></div>
+                                    <h3 class = "n1head1_text">Range (EPA est.)</h3>
+                                </div>
+                                <div class = "n1_head2">
+                                    <h3 class = "n1head2_text">396 mi</h3>
+
+                                </div>
+                            </div>
+                            <div class = "sec18box2info2box1 p2">
+                                <div class = "n2_head1">
+                                    <div class = "head1_line"></div>
+                                    <h3 class = "n2head1_text">Peak Power</h3>
+
+                                </div>
+                                <div class = "n2_head2">
+                                    <h3 class = "n2head2_text">670 hp</h3>
+
+                                </div>
+                            </div>
+                            <div class = "sec18box2info2box1 p3">
+                                <div class = "n3_head1">
+                                    <div class = "head1_line"></div>
+                                    <h3 class = "n3head1_text">Wheels</h3>
+                                </div>
+                                <div class = "n3_head2">
+                                    <h3 class = "n3head2_text">19" or 21"</h3>
+                                </div>
+                            </div>
+                            <div class = "sec18box2info2box1 p4">
+                                <div class = "n4_head1">
+                                    <div class = "head1_line"></div>
+                                    <h3 class = "n4head1_text">Cargo</h3>
+                                </div>
+                                <div class = "n4_head2">
+                                    <h3 class = "n4head2_text">28 cu ft</h3>
+                                </div>
+                            </div>
+                            <div class = "sec18box2info2box1 p5">
+                                <div class = "n5_head1">
+                                    <div class = "head1_line"></div>
+                                    <h3 class = "n5head1_text">Acceleration</h3>
+                                </div>
+                                <div class = "n5_head2">
+                                    <h3 class = "n5head2_text">3.1 s 0-60 mph</h3>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class = "o2_box2">
+                            <div class = "sec18box2info2box2 p6">
+                                <div class = "n1_head1">
+                                    <div class = "head1_line"></div>
+                                    <h3 class = "n1head1_text">Top Speed</h3>
+                                </div>
+                                <div class = "n1_head2">
+                                    <h3 class = "n1head2_text">149 mph</h3>
+
+                                </div>
+                            </div>
+                            <div class = "sec18box2info2box2 p7">
+                                <div class = "n2_head1">
+                                    <div class = "head1_line"></div>
+                                    <h3 class = "n2head1_text">Drag Coefficient</h3>
+
+                                </div>
+                                <div class = "n2_head2">
+                                    <h3 class = "n2head2_text">0.208 Cd</h3>
+
+                                </div>
+                            </div>
+                            <div class = "sec18box2info2box2 p8">
+                                <div class = "n3_head1">
+                                    <div class = "head1_line"></div>
+                                    <h3 class = "n3head1_text">Weight</h3>
+                                </div>
+                                <div class = "n3_head2">
+                                    <h3 class = "n3head2_text">4,561 lbs</h3>
+                                </div>
+                            </div>
+                            <div class = "sec18box2info2box2 p9">
+                                <div class = "n4_head1">
+                                    <div class = "head1_line"></div>
+                                    <h3 class = "n4head1_text">Powertrain</h3>
+                                </div>
+                                <div class = "n4_head2">
+                                    <h3 class = "n4head2_text">Dual Motor</h3>
+                                </div>
+                            </div>
+                            <div class = "sec18box2info2box2 p10">
+                                <div class = "n5_head1">
+                                    <div class = "head1_line"></div>
+                                    <h3 class = "n5head1_text">Supercharging Max</h3>
+                                </div>
+                                <div class = "n5_head2">
+                                    <h3 class = "n5head2_text">250 kW</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+
+
+    <div class = "sec19_content">
+        <div class = "sec19con_head">
+            <h3 class = "sec19conhead_text">Model S</h3>
+        </div>
+        <button class = "sec19_btn1">Order Now
+            <div class = "sec19btn1_cate">
+                <h5 class = "sec19btn1cate_text">Order Now</h5>
+            </div>
+        </button>
+        <button class = "sec19_btn2">View Inventory
+            <div class = "sec19btn2_cate">
+                <h5 class = "sec19btn2cate_text">View Inventory</h5>
+            </div>
+        </button>
+    </div>
+    <div class = "sec19_image"></div>
+    <div class = "sec19_para">
+        <p class = "sec19para_text">Certain high data usage vehicle features require at least Standard Connectivity, including maps, navigation <br>and voice commands. Access to features that use cellular data and third-party licenses are subject to <br>change. <span class = "sec19_underline">Learn more about Standard Connectivity and any limitations.</span></p>
+    </div>
+    <ul class = "sec19_ul">
+        <li class = "sec19_list">Tesla © 2023
+            <div class = "sec19_teslacate">
+                <h5 class = "sec19teslacate_text">CopyRight 2023 Tesla Motors</h5>
+            </div>
+        </li>
+        <li class = "sec19_list">Privacy & Legal</li>
+        <li class = "sec19_list">Vehicle Recalls</li>
+        <li class = "sec19_list">Contact</li>
+        <li class = "sec19_list">Careers</li>
+        <li class = "sec19_list">News</li>
+        <li class = "sec19_list">Engage</li>
+        <li class = "sec19_list">Locations</li>
+    </ul>
+</div>
+
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
